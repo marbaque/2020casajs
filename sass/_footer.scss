@@ -1,10 +1,31 @@
 /* Footer */
 .footer-credits {
-    color: var(--cremita);
-  }
-  .footer-menu a {
+  color: var(--cremita);
+}
+.footer-menu,
+.footer-nav-widgets-wrapper {
+
+  a {
     color: var(--cremita) !important;
   }
-  .footer-widgets-outer-wrapper {
-    border-top-color: var(--cremita);
+}
+
+.footer-widgets-outer-wrapper {
+  border-top-color: var(--cremita);
+}
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+  font-family: var(--font-sans) !important;
+}
+
+.widget {
+  h2 {
+    color: var(--doradito);
+    font-family: var(--font-serif);
+    margin-top: 0;
   }
+}

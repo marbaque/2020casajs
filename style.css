@@ -6,7 +6,7 @@
  Author:       UNED
  Author URI:   http://example.com
  Template:     twentytwenty
- Version:      1.0.0
+ Version:      1.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -23,6 +23,7 @@
   --cafenegro: #412126;
   --cremita: #f5efe1;
   --gris: #666;
+  --doradito: #D6C3A5;
   --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
@@ -504,12 +505,28 @@ body.overlay-header #site-header .capacafe {
   color: var(--cremita);
 }
 
-.footer-menu a {
+.footer-menu a,
+.footer-nav-widgets-wrapper a {
   color: var(--cremita) !important;
 }
 
 .footer-widgets-outer-wrapper {
   border-top-color: var(--cremita);
+}
+
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+  font-family: var(--font-sans) !important;
+}
+
+.widget h2 {
+  color: var(--doradito);
+  font-family: var(--font-serif);
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
