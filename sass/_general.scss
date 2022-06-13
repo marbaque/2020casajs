@@ -1,0 +1,121 @@
+/* Colores */
+:root {
+    --cafe: #6d3137;
+    --cafemaduro: #8d2942;
+    --cafenegro: #412126;
+    --cremita: #f5efe1;
+    --gris: #666;
+    --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
+    --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
+  }
+  
+  /* Diseño general */
+  
+  body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    --wp--preset--color--accent: #8d2942; /* Accent color */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Tipo */
+  h1 {
+    font-family: var(--font-serif);
+  }
+  
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .site-title {
+    font-size: 2.3rem;
+  }
+  @media (min-width: 700px) {
+    .site-title {
+      font-size: 3rem;
+    }
+  }
+  
+  .entry-content h1,
+  .entry-content h2,
+  .entry-content h3,
+  .entry-content h4,
+  .entry-content h5,
+  .entry-content h6,
+  .entry-content cite,
+  .entry-content figcaption,
+  .entry-content table,
+  .entry-content address,
+  .entry-content .wp-caption-text,
+  .entry-content .wp-block-file {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.01em;
+  }
+  
+  .entry-content h1,
+  .entry-content h2,
+  .entry-content h3 {
+    font-weight: 600;
+  }
+  
+  .entry-content {
+    font-family: var(--font-sans);
+  }
+
+
+  /* Botones */
+.wp-block-button a {
+  background-color: var(--cafe);
+  color: white; /* prevent theme css from overriding color */
+  border-radius: 0.25em;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease-in-out;
+}
+.wp-block-button a:hover {
+  background-color: var(--cafenegro);
+  color: white;
+}
+.wp-block-button a.no-border-radius {
+  border-radius: 0;
+}
+.is-style-outline .wp-block-button__link {
+  background-color: transparent;
+  color: var(--cafe) !important;
+  border: 2px solid var(--cafe);
+}
+.is-style-outline .wp-block-button__link:hover {
+  background-color: var(--cafe);
+  color: white !important;
+}
+
+/* Links */
+body:not(.overlay-header) .primary-menu > li > a,
+body:not(.overlay-header) .primary-menu > li > .icon,
+.modal-menu a,
+.footer-menu a,
+.footer-widgets a,
+#site-footer .wp-block-button.is-style-outline,
+.wp-block-pullquote:before,
+.singular:not(.overlay-header) .entry-header a,
+.archive-header a,
+.header-footer-group .color-accent,
+.header-footer-group .color-accent-hover:hover {
+  color: var(--cafemaduro) !important;
+}
+
+body:not(.overlay-header) .primary-menu > li > a,
+body:not(.overlay-header) .primary-menu > li > .icon,
+.modal-menu a {
+  color: var(--cremita) !important;
+}

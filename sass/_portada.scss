@@ -1,0 +1,51 @@
+/* Portada */
+.cover-header {
+    background-size: cover;
+    border-bottom: var(--cremita) 12px solid;
+  }
+  .capacafe {
+    background-color: var(--cafe);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-image: url(img/ornamento2.png);
+    background-position: -200px calc(100% + 200px);
+    
+    @media screen and (min-width: 700px) {
+      background-image: url(img/ornamento2.png), url(img/ornamento2.png);
+      background-position: -200px calc(100% + 200px),
+      calc(100% + 200px) calc(100% + 200px);
+    }
+  }
+  #site-header .capacafe {
+    background-image: none;
+  }
+  body.overlay-header #site-header .capacafe {
+    display: none;
+  }
+  
+  .cover-header-inner-wrapper {
+    justify-content: center;
+  }
+  .cover-header .entry-title {
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .cover-header .entry-header {
+    background-color: none;
+  }
+  .cover-header .entry-subtitle {
+    font-weight: 300;
+    margin: 0 0 0.5em;
+    font-size: 3rem;
+  }
+  .ornamento {
+    background: url(img/ornamento.png) no-repeat center center;
+    background-size: contain;
+    width: 238px;
+    height: 44px;
+    margin: 0 auto;
+  }

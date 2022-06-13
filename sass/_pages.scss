@@ -1,0 +1,42 @@
+/* Páginas */
+.singular:not(.home) .entry-header {
+  background-color: transparent;
+  color: var(--cafe);
+  padding: 6rem 0;
+}
+.singular:not(.home) .featured-media::before {
+  background: transparent;
+}
+.singular .entry-header .post-meta,
+.singular .entry-header .post-meta a {
+  color: var(--cafe) !important;
+}
+
+.archive-header {
+  background-color: var(--cremita) !important;
+  color: var(--cafenegro);
+}
+.archive-header {
+  color: var(--cafenegro) !important;
+  padding-top: 3em;
+}
+
+// Single event
+
+.single {
+  .event {
+    .post-meta-wrapper {
+      display: none;
+    }
+    .entry-content {
+      .vsel-content {
+        max-width: 100rem !important;
+      }
+    }
+
+    .featured-media img {
+      max-height: 500px;
+      width: auto;
+    }
+  }
+}

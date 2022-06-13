@@ -1,0 +1,24 @@
+/*
+ Theme Name:   Twenty Twenty Casa JS
+ Theme URI:    https://github.com/marbaque/twentytwentycasajs.git
+ Description:  Tema hijo de Twenty Twenty
+ Author:       UNED
+ Author URI:   http://example.com
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentycasajs
+ GitHub Theme URI: https://github.com/marbaque/twentytwentycasajs.git
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap"); /* font-family: 'EB Garamond', 'Garamond', 'Georgia', serif; */
+/* font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; */
+
+@import 'general';
+@import 'header';
+@import 'portada';
+@import 'archive';
+@import 'pages';
+@import 'footer';
