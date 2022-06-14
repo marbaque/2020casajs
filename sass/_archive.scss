@@ -3,10 +3,18 @@
 .programacion {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1em;
-  align-items: stretch;
+  padding: 0 1em;
+  
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+    row-gap: 1em;
+  }
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
 
   .event {
     width: 100%;
@@ -74,12 +82,6 @@
     .wp-block-button {
       margin-left: 0;
     }
-
-    @media screen and (min-width: 700px) {
-      width: 33%;
-      margin: 0 0 2.5rem;
-      padding: 1em;
-    }
   }
 }
 
@@ -102,7 +104,6 @@
 .events-title {
   font-size: 1.5em;
   border-bottom: 1px solid currentColor;
-  margin-bottom: 0 !important;
 }
 
 .events-lista {
@@ -134,9 +135,8 @@
     }
 
     @media screen and (min-width: 700px) {
-      width: 33%;
-      margin: 0 0 2.5rem;
-      padding: 1em !important;
+      // width: 33%;
+      // padding: 1em 0!important;
     }
   }
 
@@ -148,9 +148,13 @@
   }
 
   @media screen and (min-width: 700px) {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1em;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+    row-gap: 1em;
+  }
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+
   }
 }
