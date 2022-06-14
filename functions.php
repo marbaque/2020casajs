@@ -12,7 +12,7 @@ function twenty_child_enqueue_styles() {
     );
     wp_enqueue_style( 'child-style', get_stylesheet_uri(),
         array( $parenthandle ),
-        $theme->get('1.0.4') // this only works if you have Version in the style header
+        $theme->get('1.2') // this only works if you have Version in the style header
     );
 }
 

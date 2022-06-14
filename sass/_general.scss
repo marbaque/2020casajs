@@ -25,6 +25,14 @@
   }
   
   /* Tipo */
+
+  .font-serif{
+    font-family: 'EB Garamond', 'Garamond', 'Georgia', serif;
+  }
+  .font-sans {
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+  }
+  
   h1 {
     font-family: var(--font-serif);
   }
