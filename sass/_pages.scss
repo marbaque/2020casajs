@@ -36,7 +36,14 @@
 
     .featured-media img {
       max-height: 500px;
-      width: auto;
+      width: 100%;
+      object-fit: cover;
     }
   }
+}
+.vsel-day-top, .vsel-month-top {
+  background-color: var(--cafenegro);
+}
+.vsel-start-icon, .vsel-end-icon {
+  background-color: var(--cremita);
 }

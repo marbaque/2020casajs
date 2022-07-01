@@ -6,7 +6,7 @@
  Author:       UNED
  Author URI:   http://example.com
  Template:     twentytwenty
- Version:      1.1
+ Version:      1.2.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -21,7 +21,7 @@
   --cafenegro: #412126;
   --cremita: #f5efe1;
   --gris: #666;
-  --doradito: #D6C3A5;
+  --doradito: #d6c3a5;
   --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
@@ -108,10 +108,10 @@ h6 {
   letter-spacing: 0.03em;
   transition: all 0.2s ease-in-out;
 }
-
 .wp-block-button a:hover {
   background-color: var(--cafenegro);
   color: white;
+  text-decoration: none;
 }
 
 .wp-block-button a.no-border-radius {
@@ -123,10 +123,10 @@ h6 {
   color: var(--cafe) !important;
   border: 2px solid var(--cafe);
 }
-
 .is-style-outline .wp-block-button__link:hover {
   background-color: var(--cafe);
   color: white !important;
+  text-decoration: none;
 }
 
 /* Links */
@@ -331,6 +331,21 @@ body.overlay-header #site-header .capacafe {
   margin: 0 auto;
 }
 
+/* Archivos */
+.blog .entry-title {
+  font-family: var(--font-serif);
+}
+
+@media screen and (min-width: 700px) {
+  .archive-title {
+    font-size: 3em;
+  }
+}
+
+body.archive.post-type-archive-event {
+  background-color: var(--cremita);
+}
+
 /* Archivo actividades */
 .programacion {
   max-width: 1200px;
@@ -341,7 +356,7 @@ body.overlay-header #site-header .capacafe {
   .programacion {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1.5em;
+    column-gap: 2em;
     row-gap: 1em;
   }
 }
@@ -353,14 +368,26 @@ body.overlay-header #site-header .capacafe {
 .programacion .event {
   width: 100%;
   margin: 1em 0;
+  background: rgba(254, 254, 254, 0.4);
+  transition: all 0.25s;
+  border-bottom: 1px solid gray;
+}
+.programacion .event:hover {
+  box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
+  background: white;
 }
 .programacion .event .entry-title {
   font-size: 1.25em;
   margin: 0.5em 0;
   text-align: left;
+  padding: 1em;
 }
 .programacion .event .entry-title a {
-  color: var(--cafenegro);
+  color: inherit;
+}
+.programacion .event .entry-title a:hover {
+  color: var(--cafemaduro);
+  text-decoration: none;
 }
 .programacion .event img {
   width: 100%;
@@ -374,7 +401,7 @@ body.overlay-header #site-header .capacafe {
   display: none;
 }
 .programacion .event .post-inner {
-  padding: 0;
+  padding: 0 1em 1.5em;
 }
 .programacion .event .post-inner .vsel-content {
   margin: 0;
@@ -422,6 +449,7 @@ body.overlay-header #site-header .capacafe {
 .events-title {
   font-size: 1.5em;
   border-bottom: 1px solid currentColor;
+  margin-bottom: 2em;
 }
 
 .events-lista {
@@ -431,12 +459,25 @@ body.overlay-header #site-header .capacafe {
   width: 100%;
   margin: 1em 0;
   font-size: 0.8em;
+  transition: all 0.25s;
+  padding: 2em 1em 1em !important;
+  background: rgba(254, 254, 254, 0.4);
+}
+.events-lista .vsel-content:hover {
+  box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
+  background: white;
 }
 .events-lista .vsel-content .vsel-meta-title {
   font-size: 1.5em;
+  margin-bottom: 1em;
 }
 .events-lista .vsel-content .vsel-meta-title a {
   color: var(--cafenegro);
+  text-decoration: none;
+}
+.events-lista .vsel-content .vsel-meta-title a:hover {
+  color: var(--cafemaduro);
+  text-decoration: none;
 }
 .events-lista .vsel-content .vsel-meta {
   margin-bottom: 1em;
@@ -459,7 +500,7 @@ body.overlay-header #site-header .capacafe {
   .events-lista {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1.5em;
+    column-gap: 2em;
     row-gap: 1em;
   }
 }
@@ -503,7 +544,304 @@ body.overlay-header #site-header .capacafe {
 }
 .single .event .featured-media img {
   max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.vsel-day-top, .vsel-month-top {
+  background-color: var(--cafenegro);
+}
+
+.vsel-start-icon, .vsel-end-icon {
+  background-color: var(--cremita);
+}
+
+/* Testimonials */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.testimonial-slider {
+  position: relative;
+  width: 100%;
+  padding: 1em 0 1.5em;
+  /* Slides */
+  /* next & previous buttons */
+  /* position the "next button" to the right */
+  /* the dots/bullets/indicators */
+  /* add bg color to the active dot/circle */
+}
+.testimonial-slider .ts-wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial-slider .mySlides {
+  display: none;
+  padding: 1rem 1.25rem 0 1.25rem;
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .testimonial-slider .mySlides {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+.testimonial-slider .mySlides.active_slide {
+  display: block;
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+.testimonial-slider .mySlidesContainer {
+  min-height: 5rem;
+  padding: 0 0 2rem;
+}
+.testimonial-slider .prev,
+.testimonial-slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  margin-left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cafemaduro);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.4s;
+  background-image: none;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1);
+  /* on hover, add a black bg color with a little bit see-through */
+}
+@media screen and (min-width: 640px) {
+  .testimonial-slider .prev,
+.testimonial-slider .next {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+.testimonial-slider .prev:hover,
+.testimonial-slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: none;
+}
+.testimonial-slider .next {
+  position: absolute;
+  right: 0;
+  margin-right: 0.5rem;
+}
+.testimonial-slider .dot-container {
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-slider .dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: background-color 0.4s ease;
+}
+.testimonial-slider .dot.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.testimonial-slider blockquote {
+  margin: 0 auto 1em;
+  border: none;
+  padding: 0 3rem;
+  max-width: 640px;
+}
+.testimonial-slider blockquote p {
+  font-size: 1.5rem;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+  line-height: 1.5;
+}
+@media screen and (min-width: 640px) {
+  .testimonial-slider blockquote p {
+    font-size: 2rem;
+  }
+}
+.testimonial-slider blockquote p::after {
+  content: "";
+  display: none;
+}
+.testimonial-slider p.info,
+.testimonial-slider p.author {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.testimonial-slider p.author {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.testimonial-slider p.info {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+.testimonial-slider .author-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--cremita);
+  padding: 10px;
+}
+.testimonial-slider .author-pic img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 50%;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+.testimonial-slider .author-pic:after {
+  content: "";
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: -30%;
+  top: 30%;
+  background-image: url(img/ornamento2.png);
+  background-size: cover;
+  display: block;
+  z-index: 9;
+}
+
+/* ------------------------------------------------------/
+**  People grid
+**
+**  Transitions based on @JoshWComeau 
+**  https://www.joshwcomeau.com/animation/css-transitions/
+**
+/-------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .template-full-width .peoplegrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .template-full-width .peoplegrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.peoplegrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 3rem;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 440px) {
+  .peoplegrid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .peoplegrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.peoplegrid a {
+  text-decoration: none;
+  display: block;
+}
+.peoplegrid a:hover {
+  border: none;
+  text-decoration: none;
+  background-image: none;
+  box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
+  background: white;
   width: auto;
+}
+.peoplegrid a:hover .pic img {
+  transform: scale(1.1, 1.1);
+  transition: transform 125ms;
+}
+.peoplegrid .card {
+  width: 100%;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+.peoplegrid .card p {
+  margin: 0;
+}
+.peoplegrid .card .line1,
+.peoplegrid .card .line2,
+.peoplegrid .card .line3 {
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+.peoplegrid .card .line1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.peoplegrid .card .line2 {
+  font-size: 1.5rem;
+}
+.peoplegrid .card .line3 {
+  font-size: 1.25rem;
+}
+.peoplegrid .pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--cremita);
+  padding: 10px;
+}
+.peoplegrid .pic img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 50%;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+  transition: transform 500ms;
+  will-change: transform;
+}
+.peoplegrid .pic:after {
+  content: "";
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: -30%;
+  top: 30%;
+  background-image: url(img/ornamento2.png);
+  background-size: cover;
+  display: block;
+  z-index: 9;
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card .inner-card {
+  padding: 2rem 1rem;
 }
 
 /* Footer */

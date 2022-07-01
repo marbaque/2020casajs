@@ -1,0 +1,227 @@
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/* Typography
+--------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap");
+
+:root {
+  --cafe: #6d3137;
+  --cafemaduro: #8d2942;
+  --cafenegro: #412126;
+  --cremita: #f5efe1;
+  --gris: #666;
+  --doradito: #d6c3a5;
+  --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
+  --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
+}
+
+.editor-styles-wrapper {
+  /* background-color: rgb(200, 231, 183)!important; */
+}
+
+.block-editor-default-block-appender
+  textarea.block-editor-default-block-appender__content {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.editor-styles-wrapper p,
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul,
+.editor-styles-wrapper dl,
+.editor-styles-wrapper dt {
+  font-family: var(--font_sans);
+}
+
+.editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6,
+.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
+.editor-styles-wrapper cite,
+.editor-styles-wrapper figcaption,
+.editor-styles-wrapper .wp-caption-text {
+  font-family: var(--font_sans);
+}
+
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6 {
+  font-family: var(--font_sans);
+}
+
+.editor-styles-wrapper .wp-block-post-title {
+  color: var(--cafe);
+  font-weight: 600;
+  font-family: var(--font-serif);
+}
+
+.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter {
+  float: left;
+  font-size: 4em !important;
+  line-height: 1;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  margin-right: 1rem;
+  font-family: var(--font_serif);
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+}
+
+/*--------------------------------------
+  **
+  ** Blocks
+  ** 
+  ---------------------------------------*/
+/* Images */
+
+/* buttons */
+
+/* cover */
+
+/* Gallery */
+
+.wp-block-media-text .wp-block-media-text__content .has-large-font-size {
+  font-family: var(--font_serif);
+}
+
+.wp-block-quote p {
+  font-family: var(--font_serif);
+}
+
+.wp-block-pullquote blockquote p {
+  font-family: var(--font_serif);
+}
+
+/* Testimonials */
+.testimonial-slider {
+  position: relative;
+  width: 100%;
+  padding: 1em 0 1.5em;
+}
+.testimonial-slider .ts-wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial-slider .mySlides {
+  display: block;
+  padding: 2rem 2rem 0 2rem;
+  text-align: center;
+}
+.testimonial-slider .mySlidesContainer {
+  min-height: 5rem;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+}
+.testimonial-slider .prev,
+.testimonial-slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  margin-left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gris);
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.4s;
+  background-image: none;
+  background: none;
+}
+.testimonial-slider .next {
+  position: absolute;
+  right: 0;
+  margin-right: 0.5rem;
+}
+.testimonial-slider .prev:hover,
+.testimonial-slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.117);
+  background-image: none;
+}
+.testimonial-slider .dot-container {
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-slider .dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 2px;
+  background-color: var(--doradito);
+  border-radius: 50%;
+  display: inline-block;
+}
+.testimonial-slider .active {
+  background-color: #fff;
+}
+.testimonial-slider blockquote {
+  margin-top: 0;
+}
+.testimonial-slider blockquote p {
+  padding: 0;
+  margin-bottom: 0;
+  font-family: var(--font-serif);
+  color: var(--gris);
+  font-style: italic;
+}
+.testimonial-slider blockquote p::after {
+  content: "";
+  display: none;
+}
+.testimonial-slider p.author {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.testimonial-slider p.info {
+  font-weight: 300;
+  font-size: 1rem;
+}
+.testimonial-slider img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+/* People */
+
+.acf-block-preview .peoplegrid a,
+.acf-block-preview .peoplegrid .card {
+  pointer-events: none;
+}
+
+@media (min-width: 600px) {
+  .peoplegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    font-size: 1rem;
+  }
+}
+
+.peoplegrid .pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.peoplegrid .card {
+  margin-right: 1rem;
+  text-align: center;
+}

@@ -1,32 +1,65 @@
+/* Archivos */
+
+.blog {
+  .entry-title {
+    font-family: var(--font-serif);
+  }
+}
+
+.archive-title {
+  @media screen and (min-width: 700px) {
+    font-size: 3em;
+  }
+}
+
+body.archive {
+  &.post-type-archive-event {
+    background-color: var(--cremita);
+  }
+}
+
 /* Archivo actividades */
 
 .programacion {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
-  
+
   @media screen and (min-width: 700px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1.5em;
+    column-gap: 2em;
     row-gap: 1em;
   }
   @media screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
-
   }
 
   .event {
     width: 100%;
     margin: 1em 0;
+    background: rgba(254, 254, 254, 0.4);
+    transition: all 0.25s;
+    border-bottom: 1px solid gray;
+
+    &:hover {
+      box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
+      background: white;
+    }
 
     .entry-title {
       font-size: 1.25em;
       margin: 0.5em 0;
       text-align: left;
-      
+      padding: 1em;
+
       a {
-        color: var(--cafenegro);
+        color: inherit;
+
+        &:hover {
+          color: var(--cafemaduro);
+          text-decoration: none;
+        }
       }
     }
 
@@ -43,7 +76,7 @@
       display: none;
     }
     .post-inner {
-      padding: 0;
+      padding: 0 1em 1.5em;
 
       .vsel-content {
         margin: 0;
@@ -104,6 +137,7 @@
 .events-title {
   font-size: 1.5em;
   border-bottom: 1px solid currentColor;
+  margin-bottom: 2em;
 }
 
 .events-lista {
@@ -113,11 +147,26 @@
     width: 100%;
     margin: 1em 0;
     font-size: 0.8em;
+    transition: all 0.25s;
+    padding: 2em 1em 1em !important;
+    background: rgba(254, 254, 254, 0.4);
+
+    &:hover {
+      box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
+      background: white;
+    }
 
     .vsel-meta-title {
       font-size: 1.5em;
+      margin-bottom: 1em;
       a {
         color: var(--cafenegro);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--cafemaduro);
+          text-decoration: none;
+        }
       }
     }
 
@@ -150,11 +199,10 @@
   @media screen and (min-width: 700px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1.5em;
+    column-gap: 2em;
     row-gap: 1em;
   }
   @media screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
-
   }
 }
