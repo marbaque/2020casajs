@@ -28,7 +28,7 @@ if (function_exists('acf_add_local_field_group')) {
 				'sub_fields' => array(
 					array(
 						'key' => 'field_610b596b00856',
-						'label' => 'Photo',
+						'label' => 'Foto',
 						'name' => 'photo',
 						'type' => 'image',
 						'instructions' => '',
@@ -67,7 +67,7 @@ if (function_exists('acf_add_local_field_group')) {
 						'sub_fields' => array(
 							array(
 								'key' => 'field_610b5ab75baa1',
-								'label' => 'Line 1',
+								'label' => 'Línea 1',
 								'name' => 'line1',
 								'type' => 'text',
 								'instructions' => '',
@@ -86,7 +86,7 @@ if (function_exists('acf_add_local_field_group')) {
 							),
 							array(
 								'key' => 'field_610b5f9bc7ebf',
-								'label' => 'Line 2',
+								'label' => 'Línea 2',
 								'name' => 'line2',
 								'type' => 'text',
 								'instructions' => '',
@@ -112,7 +112,7 @@ if (function_exists('acf_add_local_field_group')) {
 							),
 							array(
 								'key' => 'field_61109bbe789ff',
-								'label' => 'Line 3',
+								'label' => 'Línea 3',
 								'name' => 'line3',
 								'type' => 'text',
 								'instructions' => '',
