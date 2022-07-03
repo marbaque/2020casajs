@@ -15,7 +15,7 @@
   padding: 1em 0 1.5em;
 
   .ts-wrapper {
-    max-width: 64rem;
+    max-width: 90rem;
     margin: 0 auto;
     position: relative;
   }
@@ -49,14 +49,14 @@
     cursor: pointer;
     position: absolute;
     top: 55%;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     width: 3rem;
     height: 3rem;
-    margin-top: -1.875rem;
+    margin-top: -1.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cafemaduro);
+    color: inherit;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -68,10 +68,9 @@
     background: rgba($color: #000, $alpha: 0.1);
 
     @media screen and(min-width: 640px) {
-      width: 3rem;
-      height: 3rem;
-      font-size: 2rem;
-      padding: 1rem;
+      width: 4rem;
+      height: 4rem;
+      font-size: 2.25rem;
     }
 
     /* on hover, add a black bg color with a little bit see-through */
@@ -85,7 +84,7 @@
   .next {
     position: absolute;
     right: 0;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
 
   /* the dots/bullets/indicators */
@@ -94,8 +93,8 @@
     text-align: center;
   }
   .dot {
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 1rem;
+    width: 1rem;
     margin: 0 2px;
     border-radius: 50%;
     display: inline-block;
@@ -113,17 +112,16 @@
     margin: 0 auto 1em;
     border: none;
     padding: 0 3rem;
-    max-width: 640px;
+    font-size: 90%;
 
     p {
-      font-size: 1.5rem;
       padding: 0;
       margin-bottom: 0.5rem;
       font-family: var(--font-serif);
       line-height: 1.5;
 
       @media screen and (min-width: 640px) {
-        font-size: 2rem;
+        // font-size: 2rem;
       }
 
       &::after {
@@ -141,6 +139,11 @@
   p.author {
     font-weight: 700;
     font-size: 1.5rem;
+    &:before,
+    &:after {
+      content: "-";
+      margin: 0 0.25rem;
+    }
   }
   p.info {
     font-weight: 300;

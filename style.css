@@ -1,19 +1,17 @@
-@charset "UTF-8";
 /*
  Theme Name:   Twenty Twenty Casa JS
  Theme URI:    https://github.com/marbaque/twentytwentycasajs.git
  Description:  Tema hijo de Twenty Twenty
  Author:       UNED
- Author URI:   http://example.com
+ Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.2.2
+ Version:      1.2.3
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentytwentycasajs
  GitHub Theme URI: https://github.com/marbaque/twentytwentycasajs.git
 */
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap");
 /* Colores */
 :root {
   --cafe: #6d3137;
@@ -26,7 +24,7 @@
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
 
-/* Diseño general */
+/* Disenho general */
 body {
   font-family: var(--font-sans);
   font-weight: 300;
@@ -228,7 +226,7 @@ body:not(.overlay-header) #site-header {
   background-position: center center;
 }
 
-/* Animación */
+/* Animacion */
 .flag {
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -510,7 +508,7 @@ body.archive.post-type-archive-event {
   }
 }
 
-/* Páginas */
+/* Paginas */
 .singular:not(.home) .entry-header {
   background-color: transparent;
   color: var(--cafe);
@@ -576,7 +574,7 @@ body.archive.post-type-archive-event {
   /* add bg color to the active dot/circle */
 }
 .testimonial-slider .ts-wrapper {
-  max-width: 64rem;
+  max-width: 90rem;
   margin: 0 auto;
   position: relative;
 }
@@ -605,14 +603,14 @@ body.archive.post-type-archive-event {
   cursor: pointer;
   position: absolute;
   top: 55%;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   width: 3rem;
   height: 3rem;
-  margin-top: -1.875rem;
+  margin-top: -1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cafemaduro);
+  color: inherit;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -627,10 +625,9 @@ body.archive.post-type-archive-event {
 @media screen and (min-width: 640px) {
   .testimonial-slider .prev,
 .testimonial-slider .next {
-    width: 3rem;
-    height: 3rem;
-    font-size: 2rem;
-    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.25rem;
   }
 }
 .testimonial-slider .prev:hover,
@@ -641,15 +638,15 @@ body.archive.post-type-archive-event {
 .testimonial-slider .next {
   position: absolute;
   right: 0;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 .testimonial-slider .dot-container {
   margin: 0 auto;
   text-align: center;
 }
 .testimonial-slider .dot {
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 1rem;
+  width: 1rem;
   margin: 0 2px;
   border-radius: 50%;
   display: inline-block;
@@ -663,19 +660,13 @@ body.archive.post-type-archive-event {
   margin: 0 auto 1em;
   border: none;
   padding: 0 3rem;
-  max-width: 640px;
+  font-size: 90%;
 }
 .testimonial-slider blockquote p {
-  font-size: 1.5rem;
   padding: 0;
   margin-bottom: 0.5rem;
   font-family: var(--font-serif);
   line-height: 1.5;
-}
-@media screen and (min-width: 640px) {
-  .testimonial-slider blockquote p {
-    font-size: 2rem;
-  }
 }
 .testimonial-slider blockquote p::after {
   content: "";
@@ -689,6 +680,10 @@ body.archive.post-type-archive-event {
 .testimonial-slider p.author {
   font-weight: 700;
   font-size: 1.5rem;
+}
+.testimonial-slider p.author:before, .testimonial-slider p.author:after {
+  content: "-";
+  margin: 0 0.25rem;
 }
 .testimonial-slider p.info {
   font-weight: 300;

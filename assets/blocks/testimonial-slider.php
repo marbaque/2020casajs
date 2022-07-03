@@ -24,7 +24,7 @@ $bgColor = get_field('bg_color') ?: 'transparent';;
 $txtColor = get_field('text_color') ?: 'inherit';;
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> card">
 	<div class="ts-wrapper">
 		<?php
 

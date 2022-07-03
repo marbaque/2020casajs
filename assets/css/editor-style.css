@@ -32,30 +32,24 @@
 .editor-styles-wrapper ul,
 .editor-styles-wrapper dl,
 .editor-styles-wrapper dt {
-  font-family: var(--font_sans);
+  font-family: var(--font-sans);
 }
 
 .editor-post-title__block .editor-post-title__input,
-.editor-styles-wrapper .wp-block h1,
-.editor-styles-wrapper .wp-block h2,
-.editor-styles-wrapper .wp-block h3,
-.editor-styles-wrapper .wp-block h4,
-.editor-styles-wrapper .wp-block h5,
-.editor-styles-wrapper .wp-block h6,
 .editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
 .editor-styles-wrapper cite,
 .editor-styles-wrapper figcaption,
 .editor-styles-wrapper .wp-caption-text {
-  font-family: var(--font_sans);
+  font-family: var(--font-sans);
 }
 
-.editor-styles-wrapper .wp-block h1,
-.editor-styles-wrapper .wp-block h2,
-.editor-styles-wrapper .wp-block h3,
-.editor-styles-wrapper .wp-block h4,
-.editor-styles-wrapper .wp-block h5,
-.editor-styles-wrapper .wp-block h6 {
-  font-family: var(--font_sans);
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-family: var(--font-serif);
 }
 
 .editor-styles-wrapper .wp-block-post-title {
@@ -114,7 +108,7 @@
 }
 .testimonial-slider .mySlides {
   display: block;
-  padding: 2rem 2rem 0 2rem;
+  padding: 0;
   text-align: center;
 }
 .testimonial-slider .mySlidesContainer {
