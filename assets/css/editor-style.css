@@ -39,17 +39,13 @@
 .editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
 .editor-styles-wrapper cite,
 .editor-styles-wrapper figcaption,
-.editor-styles-wrapper .wp-caption-text {
-  font-family: var(--font-sans);
-}
-
-.editor-styles-wrapper h1,
+.editor-styles-wrapper .wp-caption-text,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 
 .editor-styles-wrapper .wp-block-post-title {
@@ -100,6 +96,7 @@
   position: relative;
   width: 100%;
   padding: 1em 0 1.5em;
+  margin: 0 auto;
 }
 .testimonial-slider .ts-wrapper {
   max-width: 64rem;
@@ -117,34 +114,7 @@
 }
 .testimonial-slider .prev,
 .testimonial-slider .next {
-  cursor: pointer;
-  position: absolute;
-  top: 55%;
-  margin-left: 0.5rem;
-  width: 3rem;
-  height: 3rem;
-  margin-top: -1.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gris);
-  font-weight: bold;
-  font-size: 2rem;
-  border-radius: 50%;
-  user-select: none;
-  transition: 0.4s;
-  background-image: none;
-  background: none;
-}
-.testimonial-slider .next {
-  position: absolute;
-  right: 0;
-  margin-right: 0.5rem;
-}
-.testimonial-slider .prev:hover,
-.testimonial-slider .next:hover {
-  background-color: rgba(0, 0, 0, 0.117);
-  background-image: none;
+  display: none;
 }
 .testimonial-slider .dot-container {
   margin: 0 auto;
@@ -168,7 +138,6 @@
   padding: 0;
   margin-bottom: 0;
   font-family: var(--font-serif);
-  color: var(--gris);
   font-style: italic;
 }
 .testimonial-slider blockquote p::after {

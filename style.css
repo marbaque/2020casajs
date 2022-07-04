@@ -19,6 +19,7 @@
   --cafenegro: #412126;
   --cremita: #f5efe1;
   --gris: #666;
+  --turquesa: #45818e;
   --doradito: #d6c3a5;
   --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
@@ -593,9 +594,15 @@ body.archive.post-type-archive-event {
   animation-name: fadein;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
+  transition: all 1s;
+}
+.testimonial-slider .mySlidescentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40rem;
 }
 .testimonial-slider .mySlidesContainer {
-  min-height: 5rem;
   padding: 0 0 2rem;
 }
 .testimonial-slider .prev,
@@ -674,7 +681,7 @@ body.archive.post-type-archive-event {
 }
 .testimonial-slider p.info,
 .testimonial-slider p.author {
-  max-width: 80%;
+  max-width: 40rem;
   margin: 0 auto;
 }
 .testimonial-slider p.author {
@@ -689,7 +696,9 @@ body.archive.post-type-archive-event {
   font-weight: 300;
   font-size: 1.25rem;
 }
-.testimonial-slider .author-pic {
+
+.author-pic,
+.pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -697,17 +706,19 @@ body.archive.post-type-archive-event {
   margin-bottom: 1em;
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--cremita);
+  border: 2px solid #755c3244;
   padding: 10px;
 }
-.testimonial-slider .author-pic img {
+.author-pic img,
+.pic img {
   width: 100%;
   object-fit: cover;
   height: auto;
   border-radius: 50%;
-  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+  filter: grayscale(100%) sepia(16%) hue-rotate(143deg) saturate(1104%) brightness(87%) contrast(87%);
 }
-.testimonial-slider .author-pic:after {
+.author-pic:after,
+.pic:after {
   content: "";
   width: 140px;
   height: 140px;
@@ -797,38 +808,6 @@ body.archive.post-type-archive-event {
 }
 .peoplegrid .card .line3 {
   font-size: 1.25rem;
-}
-.peoplegrid .pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 auto;
-  margin-bottom: 1em;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--cremita);
-  padding: 10px;
-}
-.peoplegrid .pic img {
-  width: 100%;
-  object-fit: cover;
-  height: auto;
-  border-radius: 50%;
-  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
-  transition: transform 500ms;
-  will-change: transform;
-}
-.peoplegrid .pic:after {
-  content: "";
-  width: 140px;
-  height: 140px;
-  position: absolute;
-  left: -30%;
-  top: 30%;
-  background-image: url(img/ornamento2.png);
-  background-size: cover;
-  display: block;
-  z-index: 9;
 }
 
 .card {

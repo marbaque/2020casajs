@@ -44,28 +44,27 @@ $txtColor = get_field('text_color') ?: 'inherit';;
 			?>
 
 				<div class="mySlides">
-					<div class="mySlidesContainer">
+					<div class="mySlidescentered">
+						<div class="mySlidesContainer">
 
-						<?php if ($tsphoto) : ?>
-							<div class="author-pic"><?php echo wp_get_attachment_image($tsphoto, $size); ?></div>
-						<?php endif; ?>
+							<?php if ($tsphoto) : ?>
+								<div class="author-pic"><?php echo wp_get_attachment_image($tsphoto, $size); ?></div>
+							<?php endif; ?>
 
-						<?php if ($quote) : ?>
-							<blockquote <?php if ($cite) : ?> cite="<?php echo $cite; ?>" <?php endif; ?>><?php echo $quote; ?></blockquote>
-						<?php endif; ?>
+							<?php if ($quote) : ?>
+								<blockquote <?php if ($cite) : ?> cite="<?php echo $cite; ?>" <?php endif; ?>><?php echo $quote; ?></blockquote>
+							<?php endif; ?>
 
-						<?php if ($name) : ?>
-							<p class="author font-bold text-base font-sans mb-0"><?php echo $name; ?></p>
-						<?php endif; ?>
+							<?php if ($name) : ?>
+								<p class="author font-bold text-base font-sans mb-0"><?php echo $name; ?></p>
+							<?php endif; ?>
 
-						<?php if ($info) : ?>
-							<p class="info text-sm font-sans mb-0"><?php echo $info; ?></p>
-						<?php endif; ?>
-
-
-
+							<?php if ($info) : ?>
+								<p class="info text-sm font-sans mb-0"><?php echo $info; ?></p>
+							<?php endif; ?>
+						 </div><!-- mySlidesContainer -->
 					</div>
-				</div> <!-- Ends .card -->
+				</div>
 
 			<?php
 			// End loop.
@@ -90,7 +89,7 @@ $txtColor = get_field('text_color') ?: 'inherit';;
 			<span class="dot"></span>
 		<?php endforeach; ?>
 	</div>
-</div>
+</div><!-- Ends .card -->
 
 <style>
 	.testimonial-slider {

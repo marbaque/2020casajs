@@ -35,11 +35,18 @@
       animation-name: fadein;
       animation-duration: 0.5s;
       animation-timing-function: ease-in;
+      transition: all 1s;
     }
   }
 
+  .mySlidescentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40rem;
+  }
+
   .mySlidesContainer {
-    min-height: 5rem;
     padding: 0 0 2rem;
   }
 
@@ -132,7 +139,7 @@
   }
   p.info,
   p.author {
-    max-width: 80%;
+    max-width: 40rem;
     margin: 0 auto;
   }
 
@@ -149,35 +156,37 @@
     font-weight: 300;
     font-size: 1.25rem;
   }
-  .author-pic {
-    width: 150px;
-    height: 150px;
+}
+
+.author-pic,
+.pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #755c3244;
+  padding: 10px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
     border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 1em;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--cremita);
-    padding: 10px;
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: auto;
-      border-radius: 50%;
-      filter: sepia(100%) hue-rotate(190deg) saturate(500%);
-    }
-    &:after {
-      content: "";
-      width: 140px;
-      height: 140px;
-      position: absolute;
-      left: -30%;
-      top: 30%;
-      background-image: url(img/ornamento2.png);
-      background-size: cover;
-      display: block;
-      z-index: 9;
-    }
+    filter: grayscale(100%) sepia(16%) hue-rotate(143deg) saturate(1104%) brightness(87%) contrast(87%);
+  }
+  &:after {
+    content: "";
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: -30%;
+    top: 30%;
+    background-image: url(img/ornamento2.png);
+    background-size: cover;
+    display: block;
+    z-index: 9;
   }
 }
 
@@ -261,41 +270,6 @@
     }
     .line3 {
       font-size: 1.25rem;
-    }
-  }
-
-  .pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 1em;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--cremita);
-    padding: 10px;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: auto;
-      border-radius: 50%;
-      filter: sepia(100%) hue-rotate(190deg) saturate(500%);
-      transition: transform 500ms;
-      will-change: transform;
-    }
-
-    &:after {
-      content: "";
-      width: 140px;
-      height: 140px;
-      position: absolute;
-      left: -30%;
-      top: 30%;
-      background-image: url(img/ornamento2.png);
-      background-size: cover;
-      display: block;
-      z-index: 9;
     }
   }
 }
