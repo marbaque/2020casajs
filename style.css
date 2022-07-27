@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.2.5
+ Version:      1.2.6
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
@@ -76,6 +76,12 @@ h6 {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6,
+h2.comment-reply-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--cafe);
+}
+
 .entry-content cite,
 .entry-content figcaption,
 .entry-content table,
@@ -86,12 +92,6 @@ h6 {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.01em;
-}
-
-.entry-content h1,
-.entry-content h2,
-.entry-content h3 {
-  font-weight: 600;
 }
 
 .entry-content {
@@ -147,6 +147,14 @@ body:not(.overlay-header) .primary-menu > li > a,
 body:not(.overlay-header) .primary-menu > li > .icon,
 .modal-menu a {
   color: var(--cremita) !important;
+}
+
+blockquote {
+  font-family: var(--font-serif);
+}
+blockquote p {
+  line-height: 1.65 !important;
+  font-style: italic;
 }
 
 /* header */
@@ -555,6 +563,11 @@ body.archive.post-type-archive-event {
   background-color: var(--cremita);
 }
 
+h1.entry-title,
+h1.archive-title {
+  font-weight: 400;
+}
+
 /* Testimonials */
 @keyframes fadein {
   from {
@@ -671,9 +684,9 @@ body.archive.post-type-archive-event {
 }
 .testimonial-slider blockquote p {
   padding: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-family: var(--font-serif);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 .testimonial-slider blockquote p::after {
   content: "";
@@ -845,6 +858,7 @@ body.archive.post-type-archive-event {
   color: var(--doradito);
   font-family: var(--font-serif);
   margin-top: 0;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

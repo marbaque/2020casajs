@@ -39,13 +39,16 @@
 .editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
 .editor-styles-wrapper cite,
 .editor-styles-wrapper figcaption,
-.editor-styles-wrapper .wp-caption-text,
+.editor-styles-wrapper .wp-caption-text {
+  font-family: var(--font-sans);
+}
+
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
 }
 
 .editor-styles-wrapper .wp-block-post-title {
