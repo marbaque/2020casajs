@@ -45,13 +45,13 @@ if (!slides.length == 0) {
     dots[slideIndex - 1].className += " active";
   }
 }
-if (prev !== undefined) {
+if (prev) {
   prev.addEventListener("click", () => {
     plusSlides(-1);
   });
 }
 
-if (next !== undefined) {
+if (next) {
   next.addEventListener("click", () => {
     plusSlides(1);
   });

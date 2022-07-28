@@ -79,6 +79,7 @@ $txtColor = get_field('text_color') ?: 'inherit';;
 		// Do something...
 		endif; ?>
 	</div> <!-- ts-wrapper -->
+	
 	<!-- Next/prev buttons -->
 	<a class="prev">&#10094;</a>
 	<a class="next">&#10095;</a>

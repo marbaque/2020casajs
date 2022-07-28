@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.2.6
+ Version:      1.2.7
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -23,6 +23,55 @@
   --doradito: #d6c3a5;
   --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Custom colors */
+.has-cafe-color {
+  color: var(--cafe);
+}
+
+.has-cafe-background-color {
+  background-color: var(--cafe);
+}
+
+.has-cafemaduro-color {
+  color: var(--cafemaduro);
+}
+
+.has-cafemaduro-background-color {
+  background-color: var(--cafemaduro);
+}
+
+.has-cafenegro-color {
+  color: var(--cafenegro);
+}
+
+.has-cafenegro-background-color {
+  background-color: var(--cafenegro);
+}
+
+.has-cremita-color {
+  color: var(--cremita);
+}
+
+.has-cremita-background-color {
+  background-color: var(--cremita);
+}
+
+.has-turquesa-color {
+  color: var(--turquesa);
+}
+
+.has-turquesa-background-color {
+  background-color: var(--turquesa);
+}
+
+.has-doradito-color {
+  color: var(--doradito);
+}
+
+.has-doradito-background-color {
+  background-color: var(--doradito);
 }
 
 /* Disenho general */
@@ -150,11 +199,10 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 }
 
 blockquote {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 blockquote p {
   line-height: 1.65 !important;
-  font-style: italic;
 }
 
 /* header */
@@ -680,13 +728,18 @@ h1.archive-title {
   margin: 0 auto 1em;
   border: none;
   padding: 0 3rem;
-  font-size: 90%;
 }
 .testimonial-slider blockquote p {
   padding: 0;
   margin-bottom: 1rem;
   font-family: var(--font-serif);
   line-height: 1.45;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 640px) {
+  .testimonial-slider blockquote p {
+    font-size: 2rem;
+  }
 }
 .testimonial-slider blockquote p::after {
   content: "";

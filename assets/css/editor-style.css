@@ -16,6 +16,56 @@
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
 
+/* Custom colors */
+
+.has-cafe-color {
+  color: var(--cafe);
+}
+
+.has-cafe-background-color {
+  background-color: var(--cafe);
+}
+
+.has-cafemaduro-color {
+  color: var(--cafemaduro);
+}
+
+.has-cafemaduro-background-color {
+  background-color: var(--cafemaduro);
+}
+
+.has-cafenegro-color {
+  color: var(--cafenegro);
+}
+
+.has-cafenegro-background-color {
+  background-color: var(--cafenegro);
+}
+
+.has-cremita-color {
+  color: var(--cremita);
+}
+
+.has-cremita-background-color {
+  background-color: var(--cremita);
+}
+
+.has-turquesa-color {
+  color: var(--turquesa);
+}
+
+.has-turquesa-background-color {
+  background-color: var(--turquesa);
+}
+
+.has-doradito-color {
+  color: var(--doradito);
+}
+
+.has-doradito-background-color {
+  background-color: var(--doradito);
+}
+
 .editor-styles-wrapper {
   /* background-color: rgb(200, 231, 183)!important; */
 }
@@ -48,7 +98,9 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif)!important;
+  color: var(--cafe);
+  font-weight: 400!important;
 }
 
 .editor-styles-wrapper .wp-block-post-title {
@@ -64,7 +116,7 @@
   padding-top: 1rem;
   padding-left: 0.5rem;
   margin-right: 1rem;
-  font-family: var(--font_serif);
+  font-family: var(--font-serif);
   border-top: 2px solid #404040;
   border-left: 2px solid #404040;
 }
@@ -83,16 +135,9 @@
 /* Gallery */
 
 .wp-block-media-text .wp-block-media-text__content .has-large-font-size {
-  font-family: var(--font_serif);
+  font-family: var(--font-serif);
 }
 
-.wp-block-quote p {
-  font-family: var(--font_serif);
-}
-
-.wp-block-pullquote blockquote p {
-  font-family: var(--font_serif);
-}
 
 /* Testimonials */
 .testimonial-slider {
@@ -141,7 +186,6 @@
   padding: 0;
   margin-bottom: 0;
   font-family: var(--font-serif);
-  font-style: italic;
 }
 .testimonial-slider blockquote p::after {
   content: "";
@@ -190,4 +234,14 @@
 .peoplegrid .card {
   margin-right: 1rem;
   text-align: center;
+}
+
+/* Custom colors */
+
+.has-adicustom-color {
+  color: #19b132;
+}
+
+.has-adicustom-background-color {
+  background-color: #19b132;
 }

@@ -11,6 +11,55 @@
   --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
 
+/* Custom colors */
+
+.has-cafe-color {
+  color: var(--cafe);
+}
+
+.has-cafe-background-color {
+  background-color: var(--cafe);
+}
+
+.has-cafemaduro-color {
+  color: var(--cafemaduro);
+}
+
+.has-cafemaduro-background-color {
+  background-color: var(--cafemaduro);
+}
+.has-cafenegro-color {
+  color: var(--cafenegro);
+}
+
+.has-cafenegro-background-color {
+  background-color: var(--cafenegro);
+}
+
+.has-cremita-color {
+  color: var(--cremita);
+}
+
+.has-cremita-background-color {
+  background-color: var(--cremita);
+}
+
+.has-turquesa-color {
+  color: var(--turquesa);
+}
+
+.has-turquesa-background-color {
+  background-color: var(--turquesa);
+}
+
+.has-doradito-color {
+  color: var(--doradito);
+}
+
+.has-doradito-background-color {
+  background-color: var(--doradito);
+}
+
 /* Disenho general */
 
 body {
@@ -135,9 +184,8 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 
 // blockquote
 blockquote {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   p {
     line-height: 1.65!important;
-    font-style: italic;
   }
 }
