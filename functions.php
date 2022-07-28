@@ -26,26 +26,6 @@ function twentytwentycasajs_setup() {
 
 	// Block Editor Palette.
 	$editor_color_palette = array(
-		array(
-			'name'  => __( 'Accent Color', 'twentytwenty' ),
-			'slug'  => 'accent',
-			'color' => twentytwenty_get_color_for_area( 'content', 'accent' ),
-		),
-		array(
-			'name'  => _x( 'Primary', 'color', 'twentytwenty' ),
-			'slug'  => 'primary',
-			'color' => twentytwenty_get_color_for_area( 'content', 'text' ),
-		),
-		array(
-			'name'  => _x( 'Secondary', 'color', 'twentytwenty' ),
-			'slug'  => 'secondary',
-			'color' => twentytwenty_get_color_for_area( 'content', 'secondary' ),
-		),
-		array(
-			'name'  => __( 'Subtle Background', 'twentytwenty' ),
-			'slug'  => 'subtle-background',
-			'color' => twentytwenty_get_color_for_area( 'content', 'borders' ),
-		),
         array(
 			'name'  => __( 'Café principal', 'twentytwentycasajs' ),
 			'slug'  => 'cafe',
@@ -75,6 +55,31 @@ function twentytwentycasajs_setup() {
 			'name'  => __( 'Dorado', 'twentytwentycasajs' ),
 			'slug'  => 'doradito',
 			'color' => '#d6c3a5',
+		),
+        array(
+			'name'  => __( 'Blanco', 'twentytwentycasajs' ),
+			'slug'  => 'blanco',
+			'color' => '#fff',
+		),
+        array(
+			'name'  => __( 'Accent Color', 'twentytwenty' ),
+			'slug'  => 'accent',
+			'color' => twentytwenty_get_color_for_area( 'content', 'accent' ),
+		),
+        array(
+			'name'  => _x( 'Primary', 'color', 'twentytwenty' ),
+			'slug'  => 'primary',
+			'color' => twentytwenty_get_color_for_area( 'content', 'text' ),
+		),
+		array(
+			'name'  => _x( 'Secondary', 'color', 'twentytwenty' ),
+			'slug'  => 'secondary',
+			'color' => twentytwenty_get_color_for_area( 'content', 'secondary' ),
+		),
+		array(
+			'name'  => __( 'Subtle Background', 'twentytwenty' ),
+			'slug'  => 'subtle-background',
+			'color' => twentytwenty_get_color_for_area( 'content', 'borders' ),
 		),
 	);
 
