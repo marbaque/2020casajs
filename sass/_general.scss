@@ -176,12 +176,11 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 .footer-menu a,
 .footer-widgets a,
 #site-footer .wp-block-button.is-style-outline,
-.wp-block-pullquote:before,
 .singular:not(.overlay-header) .entry-header a,
 .archive-header a,
 .header-footer-group .color-accent,
 .header-footer-group .color-accent-hover:hover {
-  color: var(--cafemaduro) !important;
+  color: var(--cafemaduro);
 }
 
 body:not(.overlay-header) .primary-menu > li > a,
@@ -192,8 +191,27 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 
 // blockquote
 blockquote {
-  font-family: var(--font-sans);
   p {
     line-height: 1.65!important;
+  }
+}
+
+.wp-block-pullquote {
+
+  &::before {
+    content: "";
+    background-size: 1.5rem;
+    color: var(--cafe);
+    border: 2px solid var(--cafe);
+    background-color: var(--cremita)!important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M320 16c26.47 0 48 21.53 48 48v431.1L192 393.3l-176 102.7V64c0-26.47 21.53-48 48-48H320zM320 0H64C28.65 0 0 28.65 0 64v431.1c0 12.35 13.4 20.03 24.06 13.81L192 411.8l167.9 97.96C370.6 516 384 508.3 384 495.1V64C384 28.65 355.3 0 320 0z'/%3E%3C/svg%3E");
+  }
+  blockquote {
+    p {
+      font-weight: 400;
+      font-size: 1em;
+    }
   }
 }
