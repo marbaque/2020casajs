@@ -270,34 +270,10 @@
   text-decoration: none;
 }
 
-.editor-styles-wrapper .wp-block-pullquote::before {
-  content: "";
-  background-size: 1rem;
-  color: var(--cafemaduro) !important;
-  background-color: var(--cremita) !important;
-  border: 2px solid var(--doradito);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' fill='%236d3137'%3E%3Cpath d='M48 0H336C362.5 0 384 21.49 384 48V487.7C384 501.1 373.1 512 359.7 512C354.7 512 349.8 510.5 345.7 507.6L192 400L38.28 507.6C34.19 510.5 29.32 512 24.33 512C10.89 512 0 501.1 0 487.7V48C0 21.49 21.49 0 48 0z'/%3E%3C/svg%3E");
-}
-.editor-styles-wrapper .wp-block .wp-block-pullquote.alignleft blockquote p, 
-.editor-styles-wrapper .wp-block .wp-block-pullquote.alignright blockquote p, 
-.editor-styles-wrapper .wp-block .wp-block-pullquote.aligncenter blockquote p, 
-.editor-styles-wrapper .wp-block .wp-block-pullquote.is-style-solid-color blockquote p {
-  font-size: 1.1em;
-  font-weight: 400;
-}
-.editor-styles-wrapper .wp-block .wp-block-pullquote.alignwide blockquote p {
-  font-size: 1.5em;
-  font-weight: 400;
-}
-.editor-styles-wrapper .wp-block .wp-block-pullquote.alignfull blockquote p {
-  font-size: 2em;
-  font-weight: 400;
-}
-.editor-styles-wrapper .wp-block .wp-block-pullquote p {
-  font-weight: 400;
-  font-size: 1.1em;
-  font-family: var(--font-sans);
+.editor-styles-wrapper .wp-block .wp-block-pullquote p,
+.editor-styles-wrapper .wp-block .wp-block-blockquote p,
+.editor-styles-wrapper .wp-block .wp-block-quote p {
+  font-family: var(--font-sans) !important;
+  font-weight: 400 !important;
 }
 
