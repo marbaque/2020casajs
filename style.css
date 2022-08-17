@@ -666,11 +666,6 @@ body.archive.post-type-archive-event {
   background: transparent;
 }
 
-.singular .entry-header .post-meta,
-.singular .entry-header .post-meta a {
-  color: var(--cafe) !important;
-}
-
 .archive-header {
   background-color: transparent !important;
   color: var(--cafenegro);
