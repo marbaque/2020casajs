@@ -293,3 +293,8 @@
   font-size: 1.25em !important;
 }
 
+.editor-styles-wrapper .wp-block-pullquote::before {
+  background-color: var(--cremita)!important;
+}
+
+

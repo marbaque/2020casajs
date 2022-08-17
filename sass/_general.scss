@@ -212,6 +212,10 @@ body:not(.overlay-header) .primary-menu > li > .icon,
   }
 }
 
+.wp-block-pullquote::before {
+  background-color: var(--cremita)!important;
+}
+
 // Overrides
 
 input,

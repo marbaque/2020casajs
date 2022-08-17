@@ -228,6 +228,10 @@ body:not(.overlay-header) .primary-menu > li > .icon,
   font-size: 1.25em !important;
 }
 
+.wp-block-pullquote::before {
+  background-color: var(--cremita) !important;
+}
+
 input,
 textarea,
 button,
