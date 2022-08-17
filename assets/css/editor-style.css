@@ -256,24 +256,40 @@
   background-color: var(--cafenegro);
   color: white;
 }
-
-
+.is-style-outline .wp-block-button__link:hover {
+  background-color: var(--cafe);
+  color: white;
+  text-decoration: none;
+}
 .editor-styles-wrapper a,
 .editor-styles-wrapper .wp-block-pullquote::before {  
   background-color: transparent;
   color: var(--cafe);
   border-color: var(--cafe);
 }
-.is-style-outline .wp-block-button__link:hover {
-  background-color: var(--cafe);
-  color: white;
-  text-decoration: none;
-}
 
+/* Bloque Blockquote */
 .editor-styles-wrapper .wp-block .wp-block-pullquote p,
 .editor-styles-wrapper .wp-block .wp-block-blockquote p,
 .editor-styles-wrapper .wp-block .wp-block-quote p {
   font-family: var(--font-sans) !important;
   font-weight: 400 !important;
+  font-size: 1.1em !important;
+}
+
+.wp-block-pullquote.has-background,
+.wp-block-blockquote.has-background,
+.wp-block-quote.has-background {
+  padding: 1rem;
+}
+.editor-styles-wrapper .wp-block-pullquote.alignfull,
+.editor-styles-wrapper .wp-block-blockquote.alignfull,
+.editor-styles-wrapper .wp-block-quote.alignfull {
+  font-size: 1.5em !important;
+}
+.editor-styles-wrapper .wp-block-pullquote.alignwide,
+.editor-styles-wrapper .wp-block-blockquote.alignwide,
+.editor-styles-wrapper .wp-block-quote.alignwide {
+  font-size: 1.25em !important;
 }
 

@@ -189,12 +189,26 @@ body:not(.overlay-header) .primary-menu > li > .icon,
   color: var(--cremita) !important;
 }
 
+// Bloque de blockquote
 .wp-block-pullquote,
 .wp-block-blockquote,
 .wp-block-quote {
   p {
     font-family: var(--font-sans) !important;
     font-weight: 400 !important;
+    font-size: 1.1em !important;
+  }
+
+  &.has-background {
+    padding: 1rem;
+  }
+
+  &.alignfull {
+    font-size: 1.5em!important;
+  }
+
+  &.alignwide {
+    font-size: 1.25em!important;
   }
 }
 
@@ -226,6 +240,6 @@ button,
   }
 }
 
-.wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
-  background-color: var(--cremita)!important;
+.wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) {
+  background-color: var(--cremita) !important;
 }
