@@ -30,17 +30,39 @@
 
 	<?php
 	wp_body_open();
+
+	if (!is_page_template( get_template_directory_uri() . 'templates/template-cover.php' )) {
+		// On the cover page template, output the cover header.
+		$color_overlay_style   = '';
+		$color_overlay_classes = '';
+
+		// Get the color used for the color overlay.
+		$color_overlay_color = get_theme_mod('cover_template_overlay_background_color');
+		if ($color_overlay_color) {
+			$color_overlay_style = ' style="color: ' . esc_attr($color_overlay_color) . ';"';
+		} else {
+			$color_overlay_style = '';
+		}
+
+		// Get the opacity of the color overlay.
+		$color_overlay_opacity  = get_theme_mod('cover_template_overlay_opacity');
+		$color_overlay_opacity  = (false === $color_overlay_opacity) ? 80 : $color_overlay_opacity;
+		$color_overlay_classes .= ' opacity-' . $color_overlay_opacity;
+
+	}
+
 	?>
 
 	<?php
-	if (!is_front_page()) {
+	if (!is_front_page() && !is_page_template('templates/template-cover.php')) {
 		$frontpage_id = get_option('page_on_front');
 		$image = get_the_post_thumbnail_url($frontpage_id, 'full');
 	}
 	?>
 
 	<header id="site-header" class="header-footer-group" <?php if (!is_front_page()) : ?> style="background-image:url(<?php echo $image; ?>);" <?php endif; ?>>
-		<div class="capacafe"></div>
+		<div class="capacafe cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
+																												?>></div>
 		<div class="header-inner section-inner">
 
 			<div class="header-titles-wrapper">

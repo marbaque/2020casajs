@@ -1,51 +1,96 @@
 /* Portada */
 .cover-header {
-    background-size: cover;
-    border-bottom: var(--cremita) 12px solid;
-  }
-  .capacafe {
-    background-color: var(--cafe);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    background-image: url(img/ornamento2.png);
-    background-position: -200px calc(100% + 200px);
-    
-    @media screen and (min-width: 700px) {
-      background-image: url(img/ornamento2.png), url(img/ornamento2.png);
-      background-position: -200px calc(100% + 200px),
-      calc(100% + 200px) calc(100% + 200px);
+  background-size: cover;
+  border-bottom: var(--doradito) 12px solid;
+
+  .to-the-content {
+    color: var(--doradito);
+
+    &:hover {
+      .ornamento-icon {
+        transform: translateY(30%);
+
+        &::before {
+          right: 6rem;
+        }
+        &::after {
+          left: 6rem;
+        }
+      }
+    }
+
+    .ornamento-icon {
+      height: 3rem !important;
+      width: 3rem !important;
+      position: relative;
+      background-image: url("data:image/svg+xml,%3Csvg id='b' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.18 21.34'%3E%3Cg id='c'%3E%3Cg%3E%3Cg%3E%3Cpath d='M.21,9.31c.18,.58,.5,1.17,1,1.65,1.48,1.46,3.81,1.43,5.51,.39,1.53-.93,2.47-2.45,2.78-4.2,.07-.41,.1-.82,.07-1.22-.24-.03-.48-.08-.72-.13-.04,.13-.08,.25-.13,.37-.54,1.1-1.57,1.93-2.71,2.36-.63,.24-1.32,.36-1.99,.3-1.14-.1-1.88-.69-2.54-1.58-.29-.37-.56-.8-.87-1.27h-.17C.18,6.51,.06,7.04,.01,7.6c-.04,.55,.01,1.13,.2,1.71Z' style='fill:%23fff;;'/%3E%3Cpath d='M20.97,9.31c-.18,.58-.5,1.17-1,1.65-1.48,1.46-3.81,1.43-5.51,.39-1.53-.93-2.47-2.45-2.78-4.2-.07-.41-.1-.82-.07-1.22,.24-.03,.48-.08,.72-.13,.04,.13,.08,.25,.13,.37,.54,1.1,1.57,1.93,2.71,2.36,.63,.24,1.32,.36,1.99,.3,1.14-.1,1.88-.69,2.54-1.58,.29-.37,.56-.8,.87-1.27h.17c.24,.5,.36,1.04,.4,1.59,.04,.55-.01,1.13-.2,1.71Z' style='fill:%23fff;;'/%3E%3Cpath d='M6.69,16.54c.25,.86,2.67,3.04,3.63,4.48l.26,.31v.02h0s0,0,0,0v-.02l.26-.31c.95-1.44,3.38-3.62,3.63-4.48,.32-1.1,.16-2.47-.22-3.13-1.4-2.47-3.04-4.64-3.41-7.45h-.55c-.36,2.81-2.01,4.98-3.41,7.45-.38,.67-.54,2.03-.22,3.13Z' style='fill:%23fff;;'/%3E%3C/g%3E%3Ccircle cx='10.51' cy='2.74' r='2.74' style='fill:%23fff;;'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      transition: transform 125ms;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        background-color: white;
+        width: 100px;
+        height: 2px;
+        position: absolute;
+        top: 1rem;
+        right: 4.5rem;
+        transition: 1s all;
+      }
+
+      &::after {
+        left: 4.5rem;
+      }
     }
   }
-  #site-header .capacafe {
-    background-image: none;
+}
+.ornamentos {
+  // antes capacafe
+  background-repeat: no-repeat;
+  background-image: url(img/ornamento2.svg) !important;
+  background-position: -150% 250%;
+  background-size: 75% 75%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  @media screen and (min-width: 700px) {
+    background-image: url(img/ornamento2.svg), url(img/ornamento2.svg) !important;
+    background-size: 50% 50%;
+    background-position: -50% 150%,
+      150% 150%;
   }
-  body.overlay-header #site-header .capacafe {
+}
+#site-header .capacafe {
+  // imagen de portada heredada por el header
+  background-image: none;
+}
+body {
+  &.overlay-header #site-header .capacafe {
     display: none;
   }
-  
-  .cover-header-inner-wrapper {
-    justify-content: center;
-  }
-  .cover-header .entry-title {
-    letter-spacing: 0.05rem;
-    font-weight: 600;
-    margin-bottom: 0;
-  }
-  .cover-header .entry-header {
-    background-color: none;
-  }
-  .cover-header .entry-subtitle {
-    font-weight: 300;
-    margin: 0 0 0.5em;
+}
+
+.cover-header-inner-wrapper {
+  justify-content: center;
+}
+.cover-header .entry-title {
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.cover-header .entry-header {
+  background-color: none;
+}
+.cover-header .entry-subtitle {
+  font-weight: 300;
+  margin: 0 0 0.5em;
+  font-size: 1.75rem;
+
+  @media (min-width: 700px) {
     font-size: 3rem;
   }
-  .ornamento {
-    background: url(img/ornamento.png) no-repeat center center;
-    background-size: contain;
-    width: 238px;
-    height: 44px;
-    margin: 0 auto;
-  }
+}
