@@ -28,7 +28,7 @@ function child_fonts_url()
 	}
 
 
-	if (in_array('on', array($sansSerif,$serif))) {
+	if (in_array('on', array($sansSerif, $serif))) {
 
 		$query_args = array(
 			'family' => urlencode(implode('|', $font_families)),
@@ -80,9 +80,35 @@ function twenty_child_enqueue_styles()
 		'child-style',
 		get_stylesheet_uri(),
 		array($parenthandle),
-		$theme->get('1.3.3') // this only works if you have Version in the style header
+		$theme->get('1.3.4') // this only works if you have Version in the style header
 	);
 	wp_enqueue_style('twentytwentycasajs-google-fonts', child_fonts_url());
+
+	// GLightbox stylesheet
+	wp_enqueue_style('glightbox', get_stylesheet_directory_uri() .
+		'/assets/css/glightbox.css');
+
+	// GLightbox JS
+	wp_enqueue_script('glightbox', get_stylesheet_directory_uri() .
+		'/assets/js/glightbox.min.js', '', '', true);
+
+	// Main.js file
+	wp_enqueue_script('twentytwentycasajs', get_stylesheet_directory_uri() .
+		'/assets/js/glightbox-init.js', '', '', true);
+}
+
+/**
+ *  Adjuntar una clase a los links padres de imágenes ernlazadas
+ *  Funciona para los contenidos existentes
+ */
+add_filter('the_content', 'glightbox_class');
+function glightbox_class($content)
+{
+	global $post;
+	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/";
+	$replacement = '<a$1 class="glightbox" href=$2$3.$4$5$6</a>';
+	$content = preg_replace($pattern, $replacement, $content);
+	return $content;
 }
 
 // Add Colors to the Default Core Color Palette
@@ -163,7 +189,6 @@ function legit_block_editor_styles()
 	wp_enqueue_style('legit-editor-styles', get_theme_file_uri('/assets/css/editor-style.css'), false, '1.0', 'all');
 }
 add_action('enqueue_block_editor_assets', 'legit_block_editor_styles');
-
 
 
 

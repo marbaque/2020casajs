@@ -247,3 +247,17 @@ button,
 .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) {
   background-color: var(--cremita) !important;
 }
+
+/* Glightbox */
+
+.gprev svg, .gnext svg, .gclose svg {
+  position: absolute;
+}
+
+.glightbox-clean .gprev, .glightbox-clean .gnext, .glightbox-clean .gclose {
+  background-color: var(--cafenegro);
+
+  &:hover {
+    background-color: var(--cafe);
+  }
+}

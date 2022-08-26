@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.3.3
+ Version:      1.3.4
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -260,6 +260,18 @@ button,
 }
 .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
   background-color: var(--cremita) !important;
+}
+
+/* Glightbox */
+.gprev svg, .gnext svg, .gclose svg {
+  position: absolute;
+}
+
+.glightbox-clean .gprev, .glightbox-clean .gnext, .glightbox-clean .gclose {
+  background-color: var(--cafenegro);
+}
+.glightbox-clean .gprev:hover, .glightbox-clean .gnext:hover, .glightbox-clean .gclose:hover {
+  background-color: var(--cafe);
 }
 
 /* header */
