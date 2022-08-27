@@ -5,4 +5,5 @@ const lightbox = GLightbox({
   zoomable: true,
   descPosition: "bottom",
   slideEffect: "slide", // fade, slide, zoom, none
+  selector: ".lightbox ",
 });

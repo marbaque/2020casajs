@@ -80,7 +80,7 @@ function twenty_child_enqueue_styles()
 		'child-style',
 		get_stylesheet_uri(),
 		array($parenthandle),
-		$theme->get('1.3.4') // this only works if you have Version in the style header
+		$theme->get('1.3.5') // this only works if you have Version in the style header
 	);
 	wp_enqueue_style('twentytwentycasajs-google-fonts', child_fonts_url());
 
@@ -105,8 +105,8 @@ add_filter('the_content', 'glightbox_class');
 function glightbox_class($content)
 {
 	global $post;
-	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/";
-	$replacement = '<a$1 class="glightbox" href=$2$3.$4$5$6</a>';
+	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+	$replacement = '<a$1 class="lightbox" href=$2$3.$4$5$6>';
 	$content = preg_replace($pattern, $replacement, $content);
 	return $content;
 }
