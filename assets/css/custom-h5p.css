@@ -1,0 +1,91 @@
+/* Variables */
+:root {
+  --cafe: #6d3137;
+  --cafemaduro: #8d2942;
+  --cafenegro: #412126;
+  --cremita: #f5efe1;
+  --gris: #666;
+  --turquesa: #45818e;
+  --doradito: #d6c3a5;
+  --font-serif: "EB Garamond", "Garamond", "Georgia", serif;
+  --font-sans: "Nunito Sans", Helvetica, Arial, sans-serif;
+}
+
+#h5p-timeline .vco-storyjs {
+  font-family: var(--font-sans) !important;
+}
+#h5p-timeline .vco-slider .slider-item .content .text .container * {
+  line-height: 1.3;
+}
+
+#h5p-timeline .vco-storyjs .twitter,
+#h5p-timeline .vco-storyjs .vcard,
+#h5p-timeline .vco-storyjs .messege,
+#h5p-timeline .vco-storyjs .credit,
+#h5p-timeline .vco-storyjs .caption,
+#h5p-timeline .vco-storyjs .zoom-in,
+#h5p-timeline .vco-storyjs .zoom-out,
+#h5p-timeline .vco-storyjs .back-home,
+#h5p-timeline .vco-storyjs .time-interval div,
+#h5p-timeline .vco-storyjs .time-interval-major div,
+#h5p-timeline .vco-storyjs .nav-container {
+  font-family: var(--font-sans) !important;
+}
+#h5p-timeline .vco-storyjs h1.date,
+#h5p-timeline .vco-storyjs h2.date,
+#h5p-timeline .vco-storyjs h3.date,
+#h5p-timeline .vco-storyjs h4.date,
+#h5p-timeline .vco-storyjs h5.date,
+#h5p-timeline .vco-storyjs h6.date {
+  font-family: var(--font-sans) !important;
+}
+#h5p-timeline .vco-storyjs .timenav h1,
+#h5p-timeline .vco-storyjs .flag-content h1,
+#h5p-timeline .vco-storyjs .era h1,
+#h5p-timeline .vco-storyjs .timenav h2,
+#h5p-timeline .vco-storyjs .flag-content h2,
+#h5p-timeline .vco-storyjs .era h2,
+#h5p-timeline .vco-storyjs .timenav h3,
+#h5p-timeline .vco-storyjs .flag-content h3,
+#h5p-timeline .vco-storyjs .era h3,
+#h5p-timeline .vco-storyjs .timenav h4,
+#h5p-timeline .vco-storyjs .flag-content h4,
+#h5p-timeline .vco-storyjs .era h4,
+#h5p-timeline .vco-storyjs .timenav h5,
+#h5p-timeline .vco-storyjs .flag-content h5,
+#h5p-timeline .vco-storyjs .era h5,
+#h5p-timeline .vco-storyjs .timenav h6,
+#h5p-timeline .vco-storyjs .flag-content h6,
+#h5p-timeline .vco-storyjs .era h6 {
+  font-family: var(--font-sans) !important;
+  font-weight: 400;
+}
+#h5p-timeline .vco-storyjs p,
+#h5p-timeline .vco-storyjs blockquote,
+#h5p-timeline .vco-storyjs blockquote p,
+#h5p-timeline .vco-storyjs .twitter blockquote p {
+  font-family: var(--font-sans) !important;
+  line-height: 1.31 !important;
+}
+#h5p-timeline .vco-storyjs .vco-feature h1,
+#h5p-timeline .vco-storyjs .vco-feature h2,
+#h5p-timeline .vco-storyjs .vco-feature h3,
+#h5p-timeline .vco-storyjs .vco-feature h4,
+#h5p-timeline .vco-storyjs .vco-feature h5,
+#h5p-timeline .vco-storyjs .vco-feature h6 {
+  font-family: var(--font-serif) !important;
+  color: var(--cafe);
+  line-height: 1.1 !important;
+}
+#h5p-timeline .timeline-tooltip {
+  font-family: var(--font-sans) !important;
+}
+
+#h5p-timeline .vco-slider .slider-item .content .content-container {
+  padding: 1.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+#h5p-timeline .vco-timeline .vco-navigation .timenav-background {
+  background-color: var(--cremita);
+}

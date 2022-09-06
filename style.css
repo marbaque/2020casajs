@@ -5,14 +5,14 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.3.5
+ Version:      1.3.6
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentytwentycasajs
  GitHub Theme URI: https://github.com/marbaque/twentytwentycasajs.git
 */
-/* Colores */
+/* Variables */
 :root {
   --cafe: #6d3137;
   --cafemaduro: #8d2942;
