@@ -171,7 +171,7 @@ h2.comment-reply-title {
   border: 2px solid var(--cafe);
 
   &:hover {
-    background-color: var(--cafe);
+    background-color: var(--cafe)!important;
     color: white !important;
     text-decoration: none;
   }

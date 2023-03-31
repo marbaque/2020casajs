@@ -23,15 +23,34 @@
 
 	get_template_part( 'template-parts/entry-header' );
 
+	$terms = get_the_terms($post->ID, 'tipo_evento');
+	if($terms) { ?>
+		<div class="evento-cats"><?php
+		foreach ($terms as $term) {
+			echo '<span class="cat">' . $term->name . '</span><br>';
+		}?>
+		</div><?php
+	}
+	if (is_singular( 'evento' )) {
 	?>
 
+	<?php
+	
+		}
+		?>
 	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
 
 		<div class="entry-content">
 
 			<?php
-			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
-				the_excerpt();
+			if ( is_search() || ! is_singular() ) {
+				
+				if(get_field('resumen')) {
+					the_field('resumen');
+				} else {
+					the_excerpt();
+				}
+				
 				echo '<div class="wp-block-button is-style-outline"><a href="' . esc_url(get_permalink()) . '" class="wp-block-button__link">Ver más</a></div>';
 			} else {
 				the_content( __( 'Continue reading', 'twentytwenty' ) );
@@ -59,12 +78,6 @@
 
 		// Single bottom post meta.
 		twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
-
-		if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
-
-			get_template_part( 'template-parts/entry-author-bio' );
-
-		}
 		?>
 
 	</div><!-- .section-inner -->

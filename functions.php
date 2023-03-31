@@ -80,7 +80,7 @@ function twenty_child_enqueue_styles()
 		'child-style',
 		get_stylesheet_uri(),
 		array($parenthandle),
-		$theme->get('1.3.7') // this only works if you have Version in the style header
+		$theme->get('1.3.9') // this only works if you have Version in the style header
 	);
 	wp_enqueue_style('twentytwentycasajs-google-fonts', child_fonts_url());
 
@@ -206,7 +206,7 @@ function casajs_alter_styles(&$styles, $libraries, $embed_type) {
 	$styles[] = (object) array(
 	  // Path must be relative to wp-content/uploads/h5p or absolute.
 	  'path' => get_stylesheet_directory_uri() . '/assets/css/custom-h5p.css',
-	  'version' => '?ver=0.1' // Cache buster
+	  'version' => '?ver=0.2' // Cache buster
 	);
   }
   add_action('h5p_alter_library_styles', 'casajs_alter_styles', 10, 3);

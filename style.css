@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.3.7
+ Version:      1.3.9
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -180,7 +180,7 @@ h2.comment-reply-title {
   border: 2px solid var(--cafe);
 }
 .is-style-outline .wp-block-button__link:hover {
-  background-color: var(--cafe);
+  background-color: var(--cafe) !important;
   color: white !important;
   text-decoration: none;
 }
@@ -528,9 +528,14 @@ body.archive.post-type-archive-event {
 }
 
 /* Archivo actividades */
+h2.eventos-title {
+  margin-top: 0;
+  text-align: center;
+}
+
 .programacion {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 2em;
   padding: 0 1em;
 }
 @media screen and (min-width: 700px) {
@@ -546,84 +551,72 @@ body.archive.post-type-archive-event {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.programacion .event {
+.programacion .evento {
   width: 100%;
   margin: 1em 0;
   background: rgba(254, 254, 254, 0.4);
   transition: all 0.25s;
   border-bottom: 1px solid gray;
 }
-.programacion .event:hover {
+.programacion .evento:hover {
   box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
   background: white;
 }
-.programacion .event .entry-title {
+.programacion .evento .entry-title {
   font-size: 1.25em;
   margin: 0.5em 0;
   text-align: left;
   padding: 1em;
 }
-.programacion .event .entry-title a {
+.programacion .evento .entry-title a {
   color: inherit;
 }
-.programacion .event .entry-title a:hover {
+.programacion .evento .entry-title a:hover {
   color: var(--cafemaduro);
   text-decoration: none;
 }
-.programacion .event img {
+.programacion .evento .entry-content {
+  font-size: 1.5rem;
+}
+.programacion .evento .entry-content p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.programacion .evento img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   background-color: white;
 }
-.programacion .event .post-meta-wrapper,
-.programacion .event .vsel-meta-location,
-.programacion .event .vsel-meta-link {
+.programacion .evento .post-meta-wrapper,
+.programacion .evento .vsel-meta-location,
+.programacion .evento .vsel-meta-link {
   display: none;
 }
-.programacion .event .post-inner {
+.programacion .evento .post-inner {
   padding: 0 1em 1.5em;
 }
-.programacion .event .post-inner .vsel-content {
-  margin: 0;
-}
-.programacion .event .post-inner .vsel-meta {
-  margin-bottom: 1em;
-}
-.programacion .event .post-inner .vsel-meta > div {
-  margin-bottom: 0;
-}
-.programacion .event .post-inner .vsel-image-info,
-.programacion .event .post-inner .vsel-meta {
-  width: 100% !important;
-  font-size: 0.75em;
-  float: none;
-}
-.programacion .event .post-inner .vsel-meta-cats {
-  font-weight: 700;
-  margin-bottom: 1em;
-}
-.programacion .event .post-inner .vsel-meta-cats:before, .programacion .event .post-inner .vsel-meta-cats:after {
-  content: "-";
-}
-.programacion .event .featured-media {
+.programacion .evento .featured-media {
   margin-top: 0;
 }
-.programacion .event .section-inner {
+.programacion .evento .section-inner {
   width: 100%;
 }
-.programacion .event .wp-block-button {
+.programacion .evento .wp-block-button {
   margin-left: 0;
 }
 
-.vsel-meta-cats {
+.evento-cats {
+  list-style: none;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  margin: 0 0 1em;
+  text-align: center;
 }
-.vsel-meta-cats a {
+.evento-cats a {
   color: var(--cafe);
 }
-.vsel-meta-cats:before, .vsel-meta-cats:after {
+.evento-cats .cat:before, .evento-cats .cat:after {
   content: "-";
 }
 

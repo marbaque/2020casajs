@@ -21,9 +21,14 @@ body.archive {
 
 /* Archivo actividades */
 
+h2.eventos-title {
+  margin-top: 0;
+  text-align: center;
+}
+
 .programacion {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 2em;
   padding: 0 1em;
 
   @media screen and (min-width: 700px) {
@@ -36,7 +41,7 @@ body.archive {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .event {
+  .evento {
     width: 100%;
     margin: 1em 0;
     background: rgba(254, 254, 254, 0.4);
@@ -63,6 +68,13 @@ body.archive {
         }
       }
     }
+    .entry-content {
+      font-size: 1.5rem;
+      p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
 
     img {
       width: 100%;
@@ -78,32 +90,6 @@ body.archive {
     }
     .post-inner {
       padding: 0 1em 1.5em;
-
-      .vsel-content {
-        margin: 0;
-      }
-
-      .vsel-meta {
-        margin-bottom: 1em;
-        > div {
-          margin-bottom: 0;
-        }
-      }
-
-      .vsel-image-info,
-      .vsel-meta {
-        width: 100% !important;
-        font-size: 0.75em;
-        float: none;
-      }
-      .vsel-meta-cats {
-        font-weight: 700;
-        margin-bottom: 1em;
-        &:before,
-        &:after {
-          content: "-";
-        }
-      }
     }
 
     .featured-media {
@@ -119,17 +105,21 @@ body.archive {
   }
 }
 
-.vsel-meta-cats {
+.evento-cats {
+  list-style: none;
   font-weight: 700;
-  margin-bottom: 1em;
-
+  margin-bottom: 0.5em;
+  margin: 0 0 1em;
+  text-align: center;
   a {
     color: var(--cafe);
   }
 
-  &:before,
-  &:after {
-    content: "-";
+  .cat {
+    &:before,
+    &:after {
+      content: "-";
+    }
   }
 }
 
