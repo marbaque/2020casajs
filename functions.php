@@ -80,7 +80,7 @@ function twenty_child_enqueue_styles()
 		'child-style',
 		get_stylesheet_uri(),
 		array($parenthandle),
-		$theme->get('1.3.9') // this only works if you have Version in the style header
+		$theme->get('1.4.0') // this only works if you have Version in the style header
 	);
 	wp_enqueue_style('twentytwentycasajs-google-fonts', child_fonts_url());
 
