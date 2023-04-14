@@ -26,10 +26,18 @@ h2.eventos-title {
   text-align: center;
 }
 
+.cremita {
+  background-color: var(--cremita);
+}
+
 .programacion {
+
+  &.pasado {
+    background: var(--cremita);
+  }
   max-width: 1200px;
   margin: 0 auto 2em;
-  padding: 0 1em;
+  padding: 0 2em;
 
   @media screen and (min-width: 700px) {
     display: grid;
@@ -47,6 +55,10 @@ h2.eventos-title {
     background: rgba(254, 254, 254, 0.4);
     transition: all 0.25s;
     border-bottom: 1px solid gray;
+
+    .wp-caption-text {
+      display: none;
+    }
 
     &:hover {
       box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
@@ -70,6 +82,11 @@ h2.eventos-title {
     }
     .entry-content {
       font-size: 1.5rem;
+      margin: 1em 0;
+      
+      .fecha {
+        margin-left: 0;
+      }
       p {
         margin-left: 0;
         margin-right: 0;
@@ -110,12 +127,14 @@ h2.eventos-title {
   font-weight: 700;
   margin-bottom: 0.5em;
   margin: 0 0 1em;
-  text-align: center;
+  padding-left: 0;
+  margin-left: 0;
   a {
-    color: var(--cafe);
+    color: var(--cafenegro);
   }
 
   .cat {
+    margin-left: 0;
     &:before,
     &:after {
       content: "-";
@@ -123,72 +142,24 @@ h2.eventos-title {
   }
 }
 
-// Page de programación
+
+// Página de búsqueda
+.search-results {
+  .evento-cats {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .evento {
+    .post-meta {
+      display: none;
+    }
+  }
+}
+
+// Página de programación
 
 .events-title {
   font-size: 1.5em;
   border-bottom: 1px solid currentColor;
   margin-bottom: 2em;
-}
-
-.events-lista {
-  margin: 0 auto;
-
-  .vsel-content {
-    width: 100%;
-    margin: 1em 0;
-    font-size: 0.8em;
-    transition: all 0.25s;
-    padding: 2em 1em 1em !important;
-    background: rgba(254, 254, 254, 0.4);
-
-    &:hover {
-      box-shadow: 0 8px 15px rgba(1, 0, 61, 0.1);
-      background: white;
-    }
-
-    .vsel-meta-title {
-      font-size: 1.5em;
-      margin-bottom: 1em;
-      a {
-        color: var(--cafenegro);
-        text-decoration: none;
-
-        &:hover {
-          color: var(--cafemaduro);
-          text-decoration: none;
-        }
-      }
-    }
-
-    .vsel-meta {
-      margin-bottom: 1em;
-      > div {
-        margin-bottom: 0;
-      }
-    }
-
-    .post-meta-wrapper,
-    .vsel-meta-location,
-    .vsel-meta-link {
-      display: none;
-    }
-  }
-
-  .vsel-meta,
-  .vsel-image-info {
-    float: none;
-    width: 100% !important;
-    margin: 0;
-  }
-
-  @media screen and (min-width: 700px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2em;
-    row-gap: 1em;
-  }
-  @media screen and (min-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }

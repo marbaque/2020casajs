@@ -52,18 +52,19 @@ get_header();
 
 		<div class="programacion futuro">
 			<?php
-
+			// Fuente: https://developer.wordpress.org/reference/classes/wp_query/
+			// https://isotropic.co/how-to-query-posts-from-acf-date-values/
 			$date_args = array(
 				'posts_per_page'    => -1,
 				'post_type'         => 'evento',
-				'orderby' => 'meta_value_num',
-				'order' => 'ASC',
+				'orderby' 			=> 'meta_value_num',
+				'order' 			=> 'ASC',
 				'meta_query' => array(
 					array(
-						'key' => 'fecha_inicio',
-						'compare' => '>=',
-						'value' => date("Y-m-d"),
-						'type' => 'DATE'
+						'key' 		=> 'fecha_inicio',
+						'compare' 	=> '>=',
+						'value' 	=> date("Y-m-d"),
+						'type' 		=> 'DATE'
 					)
 				),
 			);
@@ -88,20 +89,22 @@ get_header();
 
 		<h2 class="eventos-title">Eventos pasados</h2>
 
+		<div class="is-layout-flow wp-block-group alignfull has-background cremita">
+
 		<div class="programacion pasado">
 			<?php
 
 			$date_args2 = array(
 				'posts_per_page'    => -1,
 				'post_type'         => 'evento',
-				'orderby' => 'meta_value_num',
-				'order' => 'DESC',
+				'orderby' 			=> 'meta_value_num',
+				'order' 			=> 'DESC',
 				'meta_query' => array(
 					array(
-						'key' => 'fecha_inicio',
-						'compare' => '<',
-						'value' => date("Y-m-d"),
-						'type' => 'DATE'
+						'key' 		=> 'fecha_inicio',
+						'compare' 	=> '<',
+						'value' 	=> date("Y-m-d"),
+						'type' 		=> 'DATE'
 					)
 				),
 			);
@@ -127,6 +130,8 @@ get_header();
 
 
 		</div> <!-- programación -->
+
+		</div>
 
 
 	<?php

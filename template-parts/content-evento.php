@@ -18,43 +18,60 @@
 	<?php
 
 	if (!is_search()) {
+		echo '<a href="' . esc_url(get_permalink()) . '">';
 		get_template_part('template-parts/featured-image');
+		echo '</a>';
 	}
 
-	if ( is_singular() ) {
-		the_title( '<h1 class="entry-title">', '</h1>' );
+	if (is_singular()) {
+		the_title('<h1 class="entry-title">', '</h1>');
 	} else {
-		the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
+		the_title('<h2 class="entry-title heading-size-1"><a href="' . esc_url(get_permalink()) . '">', '</a></h2>');
 	}
-	
+
 	?>
 	<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
 
 		<div class="entry-content">
 
-			<?php 
-			$terms = get_terms('tipo_evento', $post->ID );
-			echo '<ul class="evento-cats">';
-			foreach ($terms as $term) {
-				//Always check if it's an error before continuing. get_term_link() can be finicky sometimes
-				$term_link = get_term_link( $term, 'tipo_evento' );
-				if( is_wp_error( $term_link ) )
-					continue;
-				//We successfully got a link. Print it out.
-		
-		
-				echo '<li class="cat"><a href="' . $term_link . '">' . $term->name . '</a></li>';
-			}
-			echo '</ul>';
-			
+			<?php
+			$terms = get_the_terms(get_the_ID(), 'tipo_evento');
 
-			if (get_field('fecha_inicio', $post->ID)) {
-				the_field('fecha_inicio', $post->ID);
+			if ($terms && !is_wp_error($terms)) :
+
+				$term_links = array();
+
+				foreach ($terms as $term) {
+					$term_links[] = '<li class="cat"><a href="' . esc_attr(get_term_link($term->slug, 'tipo_evento')) . '">' . __($term->name) . '</a></li>';
+				}
+
+				$all_terms = join('', $term_links);
+
+				echo '<ul class="evento-cats terms-' . esc_attr($term->slug) . '">' . __($all_terms) . '</ul>';
+
+			endif;
+
+			$fechai = get_field('fecha_inicio');
+			$fechaf = get_field('fecha_final');
+			echo '<div class="fecha">';
+			if ($fechai) {
+				$inicio = strtotime($fechai);
+				
+				if ($fechaf) {
+					echo date_i18n("d", $inicio);
+				} else {
+					echo date_i18n("d F, Y", $inicio);
+				}
+				
 			}
 
-			if (get_field('fecha_inicio', $post->ID)) {
-				the_field('fecha_inicio', $post->ID);
+			if ($fechaf) {
+				$final = strtotime($fechaf);
+				echo ' - ' . date_i18n("d F, Y", $final);
 			}
+			echo '</div>';
+
+
 
 			if (is_search() || !is_singular()) {
 

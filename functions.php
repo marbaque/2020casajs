@@ -191,8 +191,6 @@ function legit_block_editor_styles()
 add_action('enqueue_block_editor_assets', 'legit_block_editor_styles');
 
 
-
-
 /**
  * Custom Blocks
  */
@@ -211,6 +209,36 @@ function casajs_alter_styles(&$styles, $libraries, $embed_type) {
   }
   add_action('h5p_alter_library_styles', 'casajs_alter_styles', 10, 3);
 
+/*
+ * Add columns to evento post list
+ */
+function add_acf_columns ( $columns ) {
+	return array_merge ( $columns, array ( 
+	  'fecha_inicio' => __( 'Comienza' ),
+	  'fecha_final'   => __( 'Finaliza' ) 
+	) );
+  }
+  add_filter ( 'manage_evento_posts_columns', 'add_acf_columns' );
+
+function evento_custom_column ( $column, $post_id ) {
+switch ( $column ) {
+	case 'fecha_inicio':
+	//echo get_post_meta ( $post_id, 'fecha_inicio', true );
+	echo (new DateTime(get_post_meta($post_id,'fecha_inicio',true)))->format('d n Y');
+	break;
+	case 'fecha_final':
+	//echo get_post_meta ( $post_id, 'fecha_final', true );
+	echo (new DateTime(get_post_meta($post_id,'fecha_final',true)))->format('d n Y');
+	break;
+}
+}
+add_action ( 'manage_evento_posts_custom_column', 'evento_custom_column', 10, 2 );
+
+// Custom posts creados con CPT UI
+require_once('inc/custom-post.php');
+
+// Custom fields creados con ACF PRO
+require_once('inc/custom-fields.php');
 
 
 require 'assets/plugin-update-checker/plugin-update-checker.php';

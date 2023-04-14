@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The default template for displaying content
  *
@@ -17,43 +18,50 @@
 
 	<?php
 
-	if ( ! is_search() ) {
-		get_template_part( 'template-parts/featured-image' );
+	if (!is_search()) {
+		get_template_part('template-parts/featured-image');
 	}
 
-	get_template_part( 'template-parts/entry-header' );
+	?>
+	<header class="entry-header has-text-align-center<?php echo esc_attr($entry_header_classes); ?>">
 
-	$terms = get_the_terms($post->ID, 'tipo_evento');
-	if($terms) { ?>
-		<div class="evento-cats"><?php
-		foreach ($terms as $term) {
-			echo '<span class="cat">' . $term->name . '</span><br>';
-		}?>
-		</div><?php
-	}
-	if (is_singular( 'evento' )) {
+		<div class="entry-header-inner section-inner medium">
+
+			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+
+		</div><!-- .entry-header-inner -->
+
+	</header><!-- .entry-header -->
+
+	<?php
+
+	if (is_singular('evento')) {
 	?>
 
 	<?php
-	
-		}
-		?>
-	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
 
-		<div class="entry-content">
+	}
+	?>
+	<div class="post-inner evento-inner">
+
+		<div class="evento-aside">
+			<?php get_template_part('template-parts/evento-aside'); ?>
+		</div>
+
+		<div class="evento-content">
 
 			<?php
-			if ( is_search() || ! is_singular() ) {
-				
-				if(get_field('resumen')) {
+			if (is_search() || !is_singular()) {
+
+				if (get_field('resumen')) {
 					the_field('resumen');
 				} else {
 					the_excerpt();
 				}
-				
+
 				echo '<div class="wp-block-button is-style-outline"><a href="' . esc_url(get_permalink()) . '" class="wp-block-button__link">Ver más</a></div>';
 			} else {
-				the_content( __( 'Continue reading', 'twentytwenty' ) );
+				the_content(__('Continue reading', 'twentytwenty'));
 			}
 			?>
 
@@ -67,7 +75,7 @@
 		<?php
 		wp_link_pages(
 			array(
-				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'twentytwenty' ) . '"><span class="label">' . __( 'Pages:', 'twentytwenty' ) . '</span>',
+				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__('Page', 'twentytwenty') . '"><span class="label">' . __('Pages:', 'twentytwenty') . '</span>',
 				'after'       => '</nav>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
@@ -77,25 +85,24 @@
 		edit_post_link();
 
 		// Single bottom post meta.
-		twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
+		//twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
 		?>
 
 	</div><!-- .section-inner -->
 
 	<?php
 
-	if ( is_single() ) {
+	if (is_single()) {
 
-		get_template_part( 'template-parts/navigation' );
-
+		get_template_part('template-parts/navigation');
 	}
 
 	/*
 	 * Output comments wrapper if it's a post, or if comments are open,
 	 * or if there's a comment number – and check for password.
 	 */
-	if ( ( is_single() || is_page() ) && ( comments_open() || get_comments_number() ) && ! post_password_required() ) {
-		?>
+	if ((is_single() || is_page()) && (comments_open() || get_comments_number()) && !post_password_required()) {
+	?>
 
 		<div class="comments-wrapper section-inner">
 
@@ -103,7 +110,7 @@
 
 		</div><!-- .comments-wrapper -->
 
-		<?php
+	<?php
 	}
 	?>
 
