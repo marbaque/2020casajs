@@ -28,14 +28,6 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- Menu institucional 2023 -->
-	<div class="contenedor_cintillo">
-	<div class="cintillo">
-		<div class="cintillo-svg"><a href="https://www.uned.ac.cr/" target="_blank"><img src="<?php echo CHILD_DIR; ?>/img/uned_cintillo.svg" alt="UNED" border="0"></a></div>
-		<div class="cintillo-tx"><a href="https://www.uned.ac.cr/" target="_blank">Universidad Estatal a Distancia, Costa Rica</a></div>
-	</div>
-	</div><!-- Menu institucional 2023 -->
-
 	<?php
 	wp_body_open();
 
@@ -69,6 +61,14 @@
 	?>
 
 	<header id="site-header" class="header-footer-group" <?php if (!is_front_page()) : ?> style="background-image:url(<?php echo $image; ?>);" <?php endif; ?>>
+		<!-- Menu institucional 2023 -->
+		<div class="contenedor_cintillo">
+		<div class="cintillo">
+			<div class="cintillo-svg"><a href="https://www.uned.ac.cr/" target="_blank"><img src="<?php echo CHILD_DIR; ?>/img/uned_cintillo.svg" alt="UNED" border="0"></a></div>
+			<div class="cintillo-tx"><a href="https://www.uned.ac.cr/" target="_blank">Universidad Estatal a Distancia, Costa Rica</a></div>
+		</div>
+		</div><!-- Menu institucional 2023 -->
+		
 		<div class="capacafe cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 																												?>></div>
 		<div class="header-inner section-inner">
