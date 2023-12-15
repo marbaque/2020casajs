@@ -1,5 +1,7 @@
 <?php
 
+// @TODO hacer que fecha_final no pueda ser menor que la fecha de inicio por medio de validación
+
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(

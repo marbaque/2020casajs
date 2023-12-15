@@ -28,6 +28,14 @@
 
 <body <?php body_class(); ?>>
 
+	<!-- Menu institucional 2023 -->
+	<div class="contenedor_cintillo">
+	<div class="cintillo">
+		<div class="cintillo-svg"><a href="https://www.uned.ac.cr/" target="_blank"><img src="<?php echo CHILD_DIR; ?>/img/uned_cintillo.svg" alt="UNED" border="0"></a></div>
+		<div class="cintillo-tx"><a href="https://www.uned.ac.cr/" target="_blank">Universidad Estatal a Distancia, Costa Rica</a></div>
+	</div>
+	</div><!-- Menu institucional 2023 -->
+
 	<?php
 	wp_body_open();
 

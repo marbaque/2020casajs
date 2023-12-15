@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.4.0
+ Version:      1.4.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -299,6 +299,10 @@ hr.wp-block-separator:not(.is-style-dots)::before {
 }
 
 /* header */
+.overlay-header #site-header {
+  top: 40px;
+}
+
 .logo-home,
 .logo-link {
   display: block;
@@ -316,7 +320,7 @@ hr.wp-block-separator:not(.is-style-dots)::before {
   .logo-home,
 .logo-link {
     margin-left: 50px;
-    margin-top: 8px;
+    margin-top: 10px;
   }
 }
 
@@ -418,6 +422,60 @@ body:not(.overlay-header) #site-header {
   100% {
     box-shadow: 4px 5px 5px 0 rgba(0, 0, 0, 0.1);
     -webkit-transform: translate3d(0, 0, 0) rotateZ(0deg) rotateX(20deg) skew(2deg, 0deg);
+  }
+}
+/*--------------------------------------------------------------
+## Cintillo simple UNED
+--------------------------------------------------------------*/
+.contenedor_cintillo {
+  background: #00519e;
+  width: 100%;
+  min-height: 40px;
+}
+
+.cintillo {
+  max-width: 168rem;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+.cintillo-svg {
+  float: left;
+  height: 20px;
+  margin-right: 10px;
+  padding-top: 8px;
+  width: 80px;
+}
+
+.cintillo-tx {
+  margin-bottom: 10px;
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 16.2px;
+  padding-top: 8px;
+}
+
+.cintillo-tx a {
+  text-decoration: none;
+  color: #FFF;
+}
+.cintillo-tx a:hover {
+  color: #FFF;
+}
+
+@media (max-width: 991px) {
+  .cintillo {
+    padding: 0;
+  }
+
+  .cintillo-svg {
+    margin-left: 20px;
+    float: left;
+  }
+}
+@media (max-width: 480px) {
+  .cintillo-tx {
+    display: none;
   }
 }
 /* Portada */
