@@ -67,6 +67,7 @@
 #site-header .capacafe {
   // imagen de portada heredada por el header
   background-image: none;
+  z-index: -1;
 }
 body {
   &.overlay-header #site-header .capacafe {

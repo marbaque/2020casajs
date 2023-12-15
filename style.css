@@ -427,6 +427,7 @@ body:not(.overlay-header) #site-header {
   background: #00519e;
   width: 100%;
   min-height: 40px;
+  z-index: 99 !important;
 }
 
 .cintillo {
@@ -534,6 +535,7 @@ body:not(.overlay-header) #site-header {
 
 #site-header .capacafe {
   background-image: none;
+  z-index: -1;
 }
 
 body.overlay-header #site-header .capacafe {
