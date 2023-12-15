@@ -58,7 +58,7 @@
 				$inicio = strtotime($fechai);
 				
 				if ($fechaf) {
-					echo date_i18n("d", $inicio);
+					echo date_i18n("d F", $inicio);
 				} else {
 					echo date_i18n("d F, Y", $inicio);
 				}

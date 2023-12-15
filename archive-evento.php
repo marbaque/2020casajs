@@ -48,7 +48,6 @@ get_header();
 	if (have_posts()) {
 
 	?>
-		<h2 class="eventos-title">Eventos próximos</h2>
 
 		<div class="programacion futuro">
 			<?php
@@ -62,10 +61,10 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' 		=> 'fecha_inicio',
-						'compare' 	=> '>=',
-						'value' 	=> date("Y-m-d"),
-						'type' 		=> 'DATE'
-					)
+						'compare' 	=> '>',
+						'value' => date("Y-m-d", strtotime("-60 days")),
+						'type' => 'DATE'
+					),
 				),
 			);
 
@@ -79,6 +78,7 @@ get_header();
 				}
 			} else {
 				// no posts found
+				echo 'No se encontraron eventos próximos.';
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
@@ -102,9 +102,9 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' 		=> 'fecha_inicio',
-						'compare' 	=> '<',
-						'value' 	=> date("Y-m-d"),
-						'type' 		=> 'DATE'
+						'compare' => '<=',
+						'value' => date("Y-m-d", strtotime("-60 days")),
+						'type' => 'DATE'
 					)
 				),
 			);
