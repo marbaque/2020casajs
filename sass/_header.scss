@@ -66,6 +66,10 @@ body:not(.overlay-header) #site-header {
   background-position: center center;
 }
 
+body:not(.overlay-header) .header-inner .toggle-wrapper::before {
+  background-color: white!important;
+}
+
 /* Animacion */
 .flag {
   -webkit-backface-visibility: hidden;
