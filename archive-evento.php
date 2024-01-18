@@ -103,7 +103,7 @@ get_header();
 					array(
 						'key' 		=> 'fecha_inicio',
 						'compare' => '<=',
-						'value' => date("Y-m-d", strtotime("-60 days")),
+						'value' => date("Y-m-d", strtotime("-90 days")),
 						'type' => 'DATE'
 					)
 				),
