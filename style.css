@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.4.3
+ Version:      1.4.4
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -156,7 +156,8 @@ h2.comment-reply-title {
 }
 
 /* Botones */
-.wp-block-button a {
+.wp-block-button a.wp-block-button__link,
+.wp-block-file a.wp-block-file__button {
   background-color: var(--cafe);
   color: white;
   /* prevent theme css from overriding color */
@@ -164,7 +165,8 @@ h2.comment-reply-title {
   letter-spacing: 0.03em;
   transition: all 0.2s ease-in-out;
 }
-.wp-block-button a:hover {
+.wp-block-button a.wp-block-button__link:hover,
+.wp-block-file a.wp-block-file__button:hover {
   background-color: var(--cafenegro);
   color: white;
   text-decoration: none;
@@ -174,15 +176,23 @@ h2.comment-reply-title {
   border-radius: 0;
 }
 
-.is-style-outline .wp-block-button__link {
+.is-style-outline .wp-block-button__link,
+.wp-block-file a.wp-block-file__button {
   background-color: transparent;
   color: var(--cafe) !important;
   border: 2px solid var(--cafe);
 }
-.is-style-outline .wp-block-button__link:hover {
+.is-style-outline .wp-block-button__link:hover,
+.wp-block-file a.wp-block-file__button:hover {
   background-color: var(--cafe) !important;
   color: white !important;
   text-decoration: none;
+}
+
+.wp-block-file {
+  background-color: var(--cremita);
+  padding: 1em;
+  border-radius: 0.5em;
 }
 
 /* Links */

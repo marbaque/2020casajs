@@ -146,7 +146,8 @@ h2.comment-reply-title {
 }
 
 /* Botones */
-.wp-block-button a {
+.wp-block-button a.wp-block-button__link,
+.wp-block-file a.wp-block-file__button {
   background-color: var(--cafe);
   color: white;
   /* prevent theme css from overriding color */
@@ -165,7 +166,8 @@ h2.comment-reply-title {
   border-radius: 0;
 }
 
-.is-style-outline .wp-block-button__link {
+.is-style-outline .wp-block-button__link,
+.wp-block-file a.wp-block-file__button {
   background-color: transparent;
   color: var(--cafe) !important;
   border: 2px solid var(--cafe);
@@ -175,6 +177,12 @@ h2.comment-reply-title {
     color: white !important;
     text-decoration: none;
   }
+}
+
+.wp-block-file {
+  background-color: var(--cremita);
+  padding: 1em;
+  border-radius: 0.5em;
 }
 
 /* Links */
