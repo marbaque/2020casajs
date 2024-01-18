@@ -1123,4 +1123,8 @@ h2.eventos-title {
   font-weight: 400;
 }
 
+.footer-social a {
+  background-color: var(--cafenegro) !important;
+}
+
 /*# sourceMappingURL=style.css.map */
