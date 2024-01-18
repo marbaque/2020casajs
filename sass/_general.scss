@@ -147,12 +147,15 @@ h2.comment-reply-title {
 
 /* Botones */
 .wp-block-button a.wp-block-button__link,
-.wp-block-file a.wp-block-file__button {
+.wp-block-file a.wp-block-file__button,
+.comment-respond #submit,
+.wp-block-search__button {
   background-color: var(--cafe);
-  color: white;
+  color: white!important;
   /* prevent theme css from overriding color */
   border-radius: 0.25em;
   letter-spacing: 0.03em;
+  border: 2px solid var(--cafenegro);
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -169,12 +172,12 @@ h2.comment-reply-title {
 .is-style-outline .wp-block-button__link,
 .wp-block-file a.wp-block-file__button {
   background-color: transparent;
-  color: var(--cafe) !important;
-  border: 2px solid var(--cafe);
+  color: var(--cafenegro) !important;
+  border: 2px solid var(--cafenegro);
 
   &:hover {
-    background-color: var(--cafe)!important;
-    color: white !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--cafemaduro) !important;
     text-decoration: none;
   }
 }
