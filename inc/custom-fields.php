@@ -28,7 +28,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_6425e2ec3973f',
-			'label' => 'Fecha de finalización',
+			'label' => 'Fecha de finalización (opcional)',
 			'name' => 'fecha_final',
 			'aria-label' => '',
 			'type' => 'date_picker',
