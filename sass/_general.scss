@@ -149,9 +149,10 @@ h2.comment-reply-title {
 .wp-block-button a.wp-block-button__link,
 .wp-block-file a.wp-block-file__button,
 .comment-respond #submit,
-.wp-block-search__button {
+.wp-block-search__button,
+.lista-eventos-button a.lista-eventos-button_link {
   background-color: var(--cafe);
-  color: white!important;
+  color: white;
   /* prevent theme css from overriding color */
   border-radius: 0.25em;
   letter-spacing: 0.03em;
@@ -170,7 +171,8 @@ h2.comment-reply-title {
 }
 
 .is-style-outline .wp-block-button__link,
-.wp-block-file a.wp-block-file__button {
+.wp-block-file a.wp-block-file__button,
+.lista-eventos-button a.lista-eventos-button_link {
   background-color: transparent;
   color: var(--cafenegro) !important;
   border: 2px solid var(--cafenegro);
@@ -186,6 +188,10 @@ h2.comment-reply-title {
   background-color: var(--cremita);
   padding: 1em;
   border-radius: 0.5em;
+}
+
+.wp-block-search__button {
+  color: white!important;
 }
 
 /* Links */
