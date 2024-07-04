@@ -174,12 +174,12 @@ h2.comment-reply-title {
 .wp-block-file a.wp-block-file__button,
 .lista-eventos-button a.lista-eventos-button_link {
   background-color: transparent;
-  color: var(--cafenegro) !important;
+  color: var(--cafenegro)!important;
   border: 2px solid var(--cafenegro);
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: var(--cafemaduro) !important;
+    background-color: var(--cafe);
+    color: var(--cremita)!important;
     text-decoration: none;
   }
 }
