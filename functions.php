@@ -80,7 +80,7 @@ function twenty_child_enqueue_styles()
 		'child-style',
 		get_stylesheet_uri(),
 		array($parenthandle),
-		$theme->get('1.5') // this only works if you have Version in the style header
+		$theme->get('1.7') // this only works if you have Version in the style header
 	);
 	wp_enqueue_style('twentytwentycasajs-google-fonts', child_fonts_url());
 
@@ -180,6 +180,7 @@ function twentytwentycasajs_setup()
 	}
 
 	add_theme_support('disable-custom-colors');
+
 }
 add_action('after_setup_theme', 'twentytwentycasajs_setup', 50);
 
@@ -234,12 +235,14 @@ switch ( $column ) {
 }
 add_action ( 'manage_evento_posts_custom_column', 'evento_custom_column', 10, 2 );
 
+
+
+
 // Custom posts creados con CPT UI
 require_once('inc/custom-post.php');
 
 // Custom fields creados con ACF PRO
 require_once('inc/custom-fields.php');
-
 
 require 'assets/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(

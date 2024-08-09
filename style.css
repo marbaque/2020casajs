@@ -5,7 +5,7 @@
  Author:       UNED
  Author URI:   http://multimedia.uned.ac.cr
  Template:     twentytwenty
- Version:      1.6
+ Version:      1.7
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -156,46 +156,24 @@ h2.comment-reply-title {
 }
 
 /* Botones */
-.wp-block-button a.wp-block-button__link,
-.wp-block-file a.wp-block-file__button,
-.comment-respond #submit,
-.wp-block-search__button,
-.lista-eventos-button a.lista-eventos-button_link {
-  background-color: var(--cafe);
-  color: white;
-  /* prevent theme css from overriding color */
-  border-radius: 0.25em;
-  letter-spacing: 0.03em;
-  border: 2px solid var(--cafenegro);
-  transition: all 0.2s ease-in-out;
+.wp-block-button:not(.is-style-outline) a.wp-block-button__link {
+  border-radius: 0.5rem;
+  background-color: var(--cafe) !important;
 }
-.wp-block-button a.wp-block-button__link:hover,
-.wp-block-file a.wp-block-file__button:hover,
-.comment-respond #submit:hover,
-.wp-block-search__button:hover,
-.lista-eventos-button a.lista-eventos-button_link:hover {
-  background-color: var(--cafenegro);
-  color: white;
-  text-decoration: none;
+.wp-block-button:not(.is-style-outline) a.wp-block-button__link:hover {
+  background-color: var(--cafemaduro) !important;
 }
 
-.wp-block-button a.no-border-radius {
-  border-radius: 0;
-}
-
-.is-style-outline .wp-block-button__link,
-.wp-block-file a.wp-block-file__button,
-.lista-eventos-button a.lista-eventos-button_link {
+.is-style-outline .wp-block-button__link {
   background-color: transparent;
-  color: var(--cafenegro) !important;
-  border: 2px solid var(--cafenegro);
+  border-radius: 0.5rem;
+  border-color: var(--cafe);
+  color: var(--cafe) !important;
 }
-.is-style-outline .wp-block-button__link:hover,
-.wp-block-file a.wp-block-file__button:hover,
-.lista-eventos-button a.lista-eventos-button_link:hover {
-  background-color: var(--cafe);
-  color: var(--cremita) !important;
-  text-decoration: none;
+.is-style-outline .wp-block-button__link:hover {
+  background-color: var(--cremita);
+  border-color: var(--cafemaduro);
+  color: var(--cafemaduro) !important;
 }
 
 .wp-block-file {
@@ -203,9 +181,27 @@ h2.comment-reply-title {
   padding: 1em;
   border-radius: 0.5em;
 }
+.wp-block-file a.wp-block-file__button {
+  border-radius: 0.5rem;
+  background-color: var(--cafe);
+}
+.wp-block-file a.wp-block-file__button:hover {
+  background-color: var(--cafemaduro);
+}
 
 .wp-block-search__button {
-  color: white !important;
+  background-color: var(--cafe);
+  color: #fff !important;
+}
+.wp-block-search__button:hover {
+  background-color: var(--cafemaduro);
+}
+
+input[type=submit] {
+  background-color: var(--cafe) !important;
+}
+input[type=submit]:hover {
+  background-color: var(--cafemaduro) !important;
 }
 
 /* Links */
@@ -213,13 +209,18 @@ body:not(.overlay-header) .primary-menu > li > a,
 body:not(.overlay-header) .primary-menu > li > .icon,
 .modal-menu a,
 .footer-menu a,
-.footer-widgets a,
+.footer-widgets a:where(:not(.wp-block-button__link)),
 #site-footer .wp-block-button.is-style-outline,
+.wp-block-pullquote::before,
 .singular:not(.overlay-header) .entry-header a,
 .archive-header a,
 .header-footer-group .color-accent,
 .header-footer-group .color-accent-hover:hover {
-  color: var(--cafemaduro);
+  color: var(--cafe) !important;
+}
+
+.singular .entry-header .post-meta {
+  color: var(--cafe) !important;
 }
 
 body:not(.overlay-header) .primary-menu > li > a,
@@ -451,7 +452,7 @@ body:not(.overlay-header) .header-inner .toggle-wrapper::before {
 ## Cintillo simple UNED
 --------------------------------------------------------------*/
 .contenedor_cintillo {
-  background: #00519e;
+  background: #333;
   width: 100%;
   min-height: 40px;
   z-index: 99 !important;
